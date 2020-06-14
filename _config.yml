@@ -15,8 +15,8 @@
 minimal_mistakes_skin    : "default" #"aqua", # "default" # "air", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
-title                    : "Jessie의 개발하고 분석하는 블로그입니다."
+locale                   : "en-US" # ko 로 설정하면 Korea가 타깃 국가
+title                    : "Hello, Jessie World."
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Jessie"
@@ -30,9 +30,9 @@ masthead_title           : # overrides the website title displayed in the masthe
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : https-sangminje-github-io. # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -250,7 +250,7 @@ tag_archive:
 #   enabled:
 #     - categories
 #     - tags
-#   layouts:
+#   layouts: 
 #     category: archive-taxonomy
 #     tag: archive-taxonomy
 #   permalinks:
@@ -276,6 +276,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
