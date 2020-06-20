@@ -20,7 +20,7 @@ title                    : "Hello, Jessie World."
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Jessie"
-description              : "Jessie의 개발 블로그입니다."
+description              : "데이터로 밥 먹고 살고 싶은 남자."
 url                      : "https://sangminje.github.io/"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "https://github.com/SangminJe/SangminJe.github.io"
@@ -95,7 +95,7 @@ analytics:
 author:
   name             : "Sangmin Je"
   avatar           : "jessie.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am a data engineer."
+  bio              : "데이터로 밥먹고 집도 짓고 세상도 바꾸자"
   location         : "Seoul"
   email            : "ssngmin1107@naver.com"
   links:
