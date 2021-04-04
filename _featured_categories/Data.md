@@ -1,10 +1,10 @@
 ---
 layout: list
-title: Dev
-slug: dev
+title: Data
+slug: Data
 menu: true
 submenu: true
-order: 3
+order: 1
 description: >
   Data Science 관련
 ---
