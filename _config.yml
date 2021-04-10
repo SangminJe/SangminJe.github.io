@@ -48,7 +48,7 @@ google_analytics:
 
 # Setting a disqus shortname will enable the comment section on pages with `comments: true` in the front matter
 disqus: True
-disqus_shortname:   
+disqus_shortname:   Jessie's Disqus
 
 # This text will appear in the footer of every page. Markdown enabled.
 copyright:           '&copy; 2021.04. by Jessie'

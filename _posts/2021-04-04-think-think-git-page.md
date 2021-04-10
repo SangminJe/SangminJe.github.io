@@ -53,7 +53,6 @@ comments: true
 
 ## 도움을 준 자료
 ---
-* __지옥에서 온 Git...__  
 깃허브 초반의 허들이 굉장히 높다고 느꼈습니다. 그래서 제가 이 블로그를 만들면서 도움이 된 영상과 블로그를 같이 소개하고자 합니다 :)
 
 * __도움이 된 유튜브 / 블로그__  
@@ -62,7 +61,6 @@ comments: true
     - [Theory DB](https://theorydb.github.io/envops/2019/05/03/envops-blog-github-pages-jekyll)
 
 ---
-
       
          
 앞으로 블로그에 계속 유용하고 좋은 자료들을 포스팅할 예정입니다. 관심있게 지켜봐주세요 :)
