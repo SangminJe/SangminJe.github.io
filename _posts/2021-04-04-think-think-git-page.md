@@ -16,7 +16,7 @@ comments: true
 
 - 목차
     - [1. 안예쁜 티스토리](#안예쁜-티스토리)
-    - [2. Markdown의 필요성](#Markdown의-필요성)
+    - [2. Markdown의 필요성](#마크다운의-필요성)
     - [3. 포트폴리오](#포트폴리오)
     - [4. 도움을 준 자료들](#도움을-준-자료)
 
@@ -32,7 +32,8 @@ comments: true
 티스토리는 아무리 애를 써도 제 능력으로는 예뻐지지가 않았습니다. 나중에는 HTML과 CSS를 건드려야 하는 지경에 이르렀는데 도저히 엄두가 안나더군요. 아무리 자기 블로그이지만 예뻐야 자꾸 들어가고 싶은 마음이 드는 법인데, 저는 티스토리에는 그렇게 정이 가지 않았습니다.
 <BR/>
 
-## Markdown의 필요성
+## 마크다운의 필요성
+
 ---
 
 * __R과의 궁합__  
@@ -56,9 +57,9 @@ comments: true
 깃허브 초반의 허들이 굉장히 높다고 느꼈습니다. 그래서 제가 이 블로그를 만들면서 도움이 된 영상과 블로그를 같이 소개하고자 합니다 :)
 
 * __도움이 된 유튜브 / 블로그__  
-    - [Git & GitHub Page 블로그 만들기 4강 - Github Page 활용하기T아카데미](https://www.youtube.com/watch?v=eCv_bh-Ax-Q)
+    - [Git & GitHub Page 블로그 만들기 - T아카데미](https://www.youtube.com/watch?v=eCv_bh-Ax-Q)
 
-    - [Theory DB](https://theorydb.github.io/envops/2019/05/03/envops-blog-github-pages-jekyll/#%ED%8C%8C%EC%9D%BC-%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0)
+    - [Theory DB](https://theorydb.github.io/envops/2019/05/03/envops-blog-github-pages-jekyll)
 
 ---
 

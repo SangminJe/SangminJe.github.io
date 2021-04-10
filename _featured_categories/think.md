@@ -1,10 +1,10 @@
 ---
 layout: list
 title: Think
-slug: Think
+slug: think
 menu: true
 submenu: false
 order: 3
-description: >
-  Essays 
+description: > 
+  개인적인 생각 그리고 수필들
 ---
