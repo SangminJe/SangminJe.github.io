@@ -2,7 +2,7 @@
 #  User configuration
 # -----------------------------------------------------------------------------
 
-title:               Jessie's Blog
+title:               제씨의 블로그
 
 # The unique resource location of your page.
 # Set to `https://<username>.github.io` when hosting on GitHub Pages
@@ -10,7 +10,7 @@ url:                 https://sangminje.github.io
 
 # Set to '' when hosting a blog on GitHub Pages, ie on `//<username>.github.io`
 # Set to '/<reponame>' when using the `gh-pages` branch of a repository
-baseurl:             ""
+baseurl:             //sangminje.github.io
 
 # A very short description of your page
 tagline:             "Data and Life"
