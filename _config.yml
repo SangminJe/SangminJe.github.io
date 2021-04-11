@@ -10,7 +10,7 @@ url:                 https://sangminje.github.io
 
 # Set to '' when hosting a blog on GitHub Pages, ie on `//<username>.github.io`
 # Set to '/<reponame>' when using the `gh-pages` branch of a repository
-baseurl:             //sangminje.github.io
+baseurl:             ""
 
 # A very short description of your page
 tagline:             "Data and Life"
@@ -48,7 +48,7 @@ google_analytics:
 
 # Setting a disqus shortname will enable the comment section on pages with `comments: true` in the front matter
 disqus: True
-disqus_shortname:  https-sangminje-github-io-1
+disqus_shortname: sangminje-github-io
 
 # This text will appear in the footer of every page. Markdown enabled.
 copyright:           '&copy; 2021.04. by Jessie'
