@@ -7,10 +7,7 @@ tags: Data ML tidymodels parsnip 타이디모델 R-machine-learning
 comments: true  
 ---  
 
-
-> 본 문서는 Tidymodel에 대해 공부하고 프로세스를 익히는 것에 목적이 있습니다.
-
-</br>
+>본 문서는 Tidymodel에 대해 공부하고 프로세스를 익히는 것에 목적이 있습니다.
 
 -   먼저 **TidyModel**을 접하고 생각한 것은 ’와 정말 많이 편하게 만드려고 노력했구나’였다. 예를 들어서 이전에는 **로지스틱회귀분석**과 **RandomForest**의 모델링을 위해서는 전혀 다른 패키지와 전혀다른 프로세스를 태워야 했다. 하지만 지금 Tidymodel에서는 몇 가지 공통된 패키지에서 여러 모델들을 해결할 수
     있다는 장점이 있다.
@@ -21,7 +18,7 @@ comments: true
 
 -   모든 공부에 기본베이스는 필요하지만, 어느 정도 배우고 나서는 꼭 수학공식 배우듯이 밑에서부터 쌓아야 할 이유는 없다고 본다. 직접 업무를 수행하듯이 하면서 필요한 것들을 끼워넣으며 배우는 게 더욱 실무에는 효율적인 방법이라고 생각한다. 그래서 앞으로는 머신러닝을 **Tidymodel**로 풀어가면서 중간중간 마주치는 <u>통계개념과 방법론</u>을 정리해나갈 생각이다.
 
-</br> </br>
+ 
 
 ## 1. 라이브러리 부르기
 ```r
@@ -31,7 +28,7 @@ comments: true
 -   `readr` 패키지는 테이블 형태의 데이터를 좀더 친숙하고 편하게 불러들이기 위해 사용한다.
 - <https://cran.r-project.org/web/packages/readr/readme/README.html>
 
-</br> </br>
+ 
 
 ## 2. 데이터로드
 
@@ -60,7 +57,7 @@ comments: true
 2.  `mutate`를 통해서 character를 factor로 데이터 타입 변경
 3.  **urchins** 데이터는 `tibble` 형태임. tibble은 Data.Frame보다 더 정리된 형태이며 tidyverse의 패키지와 상호호환되기 좋은 데이터 형태
 
-</br> </br>
+ 
 
 ## 3. 시각화
 ```r
@@ -76,7 +73,7 @@ comments: true
 
 1.  시각화 결과 **initial\_volume**에 따른 **width**크기의 변화가 분명히 존재하며, **food\_regime**에 따라서 기울기가 다르게 나타남을 알 수 있다.
 
-</br> </br>
+ 
 
 ## 4. 모델 만들기
 
@@ -92,7 +89,7 @@ comments: true
 1.  먼저 모델을 선언해준다. 여기서는 `linear_reg()`이라고 선형귀모델을 선언했다.
 2.  [set engine](https://parsnip.tidymodels.org/reference/set_engine.html)은 어떤 패키지나 컴퓨팅시스템을 통해서 모델을 훈련시킬 것인지 지정하는 것이다.
 
-</br>
+
 
 ```r
     lm_fit <- 
@@ -115,7 +112,7 @@ comments: true
 1.  `fit()`을 통해서 모델을 쉽게 fitting 가능하다.  
 2.  `tidy`함수를 통해서 피팅한 결과를 깔끔한 테이블 형태로 볼 수 있다.
 
-</br>
+
 ```r
     tidy(lm_fit) %>% 
       dwplot(dot_args = list(size = 2, color = "black"),
@@ -129,7 +126,7 @@ comments: true
 2.  하지만 이 그래프만을 보고 **P-Value**, 즉 유효성을 볼 수는 없는 것처럼 보인다.
 3.  [참고자료](https://cran.r-project.org/web/packages/dotwhisker/vignettes/dotwhisker-vignette.html)
 
-</br> </br>
+ 
 
 ## 5. Prediction
 
@@ -186,7 +183,7 @@ comments: true
     ## 24 4 e
     ## 25 5 e
 ```
-</br>
+
 
 **Tidymodel**에서는 predicted\_value, 즉 예측값의 포멧이 똑같다.
 ```r
@@ -251,7 +248,7 @@ comments: true
       labs(y = "성게 사이즈")
 ```
 ![asd](../assets/img/%5BRMD%5D1.build-a-model_files/figure-markdown_strict/unnamed-chunk-1-1.png)
-</br> </br>
+ 
 
 \#\#6. 다른 모델링 적용해보기 지금까지는 회귀분석으로 모두가 만족할만한 결과를 냈다. 하지만 **베이지안 통계**신봉자는 베이지안 모델링을 사용하고 싶을 수 있다.  
 보통 이렇게 모델링을 바꿀 경우, 전혀 다른 프로세스와 패키지를 사용해야 한다.하지만 `tidymodel`에서는 유사한 모델피팅 과정을 통해 베이지안 회귀분석을 수행할 수 있다.아래를 보자.  
@@ -314,7 +311,7 @@ comments: true
 
 1. 위 과정은 앞서 진행한 회귀분석의 plot\_data 작성 과정과 동일하므로 생략한다.
 
-</br> </br>
+ 
 
 ## 7. 결론
 
@@ -323,6 +320,6 @@ comments: true
 1.  `tidymodels`를 통해서 머신러닝 프로세스를 R 상에서 일원화 할 수 있다.
 2.  다른 패키지의 도입 없이 하나의 패키지 플랫폼에서 머신러닝 과정을 처리 가능하다.
 
-</br>
+
 
 이어지는 정리에서는 `recipe`를 살펴볼 예정이다. 이 패키지는 머신러닝에서 기본적으로 수행하는 여러 전처리 과정을 쉽게 할 수 있도록 도와주는 패키지이다. 이 과정을 통해서 전처리 과정이 얼마나 간단하게 진행되어서 모델링 자체에 집중할 수 있게 되는지 한 번 파악해보자.
