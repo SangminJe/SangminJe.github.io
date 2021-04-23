@@ -48,8 +48,8 @@ comments: true
 1.  데이터 소개
 
 -   **urchins**데이터는 성게와 관련된 데이터
-    -   **initial\_volume** : 성게의 초기 사이즈
-    -   **food\_regime** : 먹이를 주는 그룹의 분류
+    -   **initial_volume** : 성게의 초기 사이즈
+    -   **food_regime** : 먹이를 주는 그룹의 분류
     -   **width** : 성체의 사이즈, 여기서는 <u>종속변수</u>가 된다.
 
 1.  `setNames` 함수를 `%>%`를 통해 적용하여 데이터의 이름을 바꿔줬다.
@@ -68,7 +68,7 @@ comments: true
 
     ## `geom_smooth()` using formula 'y ~ x'
 ```
-![urchins_plot](../assets/img/%5BRMD%5D1.build-a-model_files/figure-markdown_strict/urchins_plot1-1.png)
+![urchins_plot](../assets/img/post_img/urchins_plot1-1.png)
 
 
 1.  시각화 결과 **initial\_volume**에 따른 **width**크기의 변화가 분명히 존재하며, **food\_regime**에 따라서 기울기가 다르게 나타남을 알 수 있다.
@@ -120,7 +120,7 @@ comments: true
              vline = geom_vline(xintercept = 0, colour = "grey50", linetype = 2))
 ```
 
-![dot_whisker](../assets/img/%5BRMD%5D1.build-a-model_files/figure-markdown_strict/dotwhisker-1.png)
+![dot_whisker](../assets/img/post_img/dotwhisker-1.png)
 
 1.  `dwplot`은 dot-whisker-plot의 약자이다. 이 plot은 fitting한 모델의 coefficient estimate의 결과를 점으로, 95% 신뢰구간을 whisker(수염)으로 표현해준다.
 2.  하지만 이 그래프만을 보고 **P-Value**, 즉 유효성을 볼 수는 없는 것처럼 보인다.
@@ -246,7 +246,7 @@ comments: true
                     width = .2) + 
       labs(y = "성게 사이즈")
 ```
-![asd](../assets/img/%5BRMD%5D1.build-a-model_files/figure-markdown_strict/unnamed-chunk-1-1.png)
+![asd](../assets/img/post_img/unnamed-chunk-1-1.png)
  
 
 ## 6. 다른 모델링 적용해보기
@@ -309,7 +309,7 @@ comments: true
       ggtitle("자유도 1의 t-분포 하의 베이지안 회귀분석")
 
 ```
-![ddd](../assets/img/%5BRMD%5D1.build-a-model_files/figure-markdown_strict/bayesian_fitting-1.png)
+![ddd](../assets/img/post_img/bayesian_fitting-1.png)
 
 1. 위 과정은 앞서 진행한 회귀분석의 plot\_data 작성 과정과 동일하므로 생략한다.
 
