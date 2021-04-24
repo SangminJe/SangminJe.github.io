@@ -1,13 +1,28 @@
 ---  
 layout: post  
-title: "Tidymodels - 1. 모델 만들기"
-subtitle: "Tidymodels로 시작하는 머신러닝 제 1화"  
+title: "Tidymodels로 시작하는 머신러닝 (1)"
+subtitle: "1. 모델 만들기"  
 categories: Data  
 tags: Data ML tidymodels parsnip 타이디모델 R-machine-learning 
 comments: true  
 ---  
 
 >본 문서는 Tidymodel에 대해 공부하고 프로세스를 익히는 것에 목적이 있습니다.
+
+
+- 목차
+    - [1. 라이브러리 로드](#라이브러리-로드)
+    - [2. 데이터 로드](#데이터-로드)
+    - [3. 시각화](#시각화)
+    - [4. 모델 만들기](#모델-만들기)
+    - [5. Prediction](#Prediction)
+    - [6. 다른 모델링 적용해보기](#다른-모델링-적용해보기)
+    - [7. 결론](#결론)
+
+---
+
+
+
 
 -   먼저 **TidyModel**을 접하고 생각한 것은 ’와 정말 많이 편하게 만드려고 노력했구나’였다. 예를 들어서 이전에는 **로지스틱회귀분석**과 **RandomForest**의 모델링을 위해서는 전혀 다른 패키지와 전혀다른 프로세스를 태워야 했다. 하지만 지금 Tidymodel에서는 몇 가지 공통된 패키지에서 여러 모델들을 해결할 수
     있다는 장점이 있다.
@@ -18,9 +33,9 @@ comments: true
 
 -   모든 공부에 기본베이스는 필요하지만, 어느 정도 배우고 나서는 꼭 수학공식 배우듯이 밑에서부터 쌓아야 할 이유는 없다고 본다. 직접 업무를 수행하듯이 하면서 필요한 것들을 끼워넣으며 배우는 게 더욱 실무에는 효율적인 방법이라고 생각한다. 그래서 앞으로는 머신러닝을 **Tidymodel**로 풀어가면서 중간중간 마주치는 <u>통계개념과 방법론</u>을 정리해나갈 생각이다.
 
- 
+ ---
 
-## 1. 라이브러리 부르기
+## 라이브러리 로드
 ```r
     library(tidymodels) 
 ```
@@ -28,9 +43,9 @@ comments: true
 -   `readr` 패키지는 테이블 형태의 데이터를 좀더 친숙하고 편하게 불러들이기 위해 사용한다.
 - <https://cran.r-project.org/web/packages/readr/readme/README.html>
 
- 
+ ---
 
-## 2. 데이터로드
+## 데이터 로드
 
 ```r
     urchins <- read_csv("https://tidymodels.org/start/models/urchins.csv") %>% 
@@ -57,9 +72,9 @@ comments: true
 2.  `mutate`를 통해서 character를 factor로 데이터 타입 변경
 3.  **urchins** 데이터는 `tibble` 형태임. tibble은 Data.Frame보다 더 정리된 형태이며 tidyverse의 패키지와 상호호환되기 좋은 데이터 형태
 
- 
+ ---
 
-## 3. 시각화
+## 시각화
 ```r
     urchins %>% 
       ggplot(aes(x = initial_volume, y = width, col = food_regime))+
@@ -73,9 +88,9 @@ comments: true
 
 1.  시각화 결과 **initial\_volume**에 따른 **width**크기의 변화가 분명히 존재하며, **food\_regime**에 따라서 기울기가 다르게 나타남을 알 수 있다.
 
- 
+ ---
 
-## 4. 모델 만들기
+## 모델 만들기
 
 `width ~ initial_volume *food_regime`  
 위와 같은 형태로 데이터를 짜면 food\_regime에 따라서 각각의
@@ -126,9 +141,9 @@ comments: true
 2.  하지만 이 그래프만을 보고 **P-Value**, 즉 유효성을 볼 수는 없는 것처럼 보인다.
 3.  [참고자료](https://cran.r-project.org/web/packages/dotwhisker/vignettes/dotwhisker-vignette.html)
 
- 
+ ---
 
-## 5. Prediction
+## Prediction
 
 **urnchins**데이터는 **lm\_fit** 객체 안에 학습되어있다. 이를 바탕으로 새로운 데이터가 있다고 가정하고 모델링을 진행하자.
 ```r
@@ -248,8 +263,9 @@ comments: true
 ```
 ![asd](https://sangminje.github.io/assets/img/post_img/unnamed-chunk-1-1.png)
  
+---
 
-## 6. 다른 모델링 적용해보기
+## 다른 모델링 적용해보기
 
 지금까지는 회귀분석으로 모두가 만족할만한 결과를 냈다. 하지만 **베이지안 통계**신봉자는 베이지안 모델링을 사용하고 싶을 수 있다.  
 보통 이렇게 모델링을 바꿀 경우, 전혀 다른 프로세스와 패키지를 사용해야 한다.하지만 `tidymodel`에서는 유사한 모델피팅 과정을 통해 베이지안 회귀분석을 수행할 수 있다.아래를 보자.  
@@ -313,9 +329,9 @@ comments: true
 
 1. 위 과정은 앞서 진행한 회귀분석의 plot\_data 작성 과정과 동일하므로 생략한다.
 
- 
+ ---
 
-## 7. 결론
+## 결론
 
 이 패키지를 통해서 우리는 아래와 같은 것을 배울 수 있다.
 
@@ -323,4 +339,3 @@ comments: true
 2.  다른 패키지의 도입 없이 하나의 패키지 플랫폼에서 머신러닝 과정을 처리 가능하다.
 
 이어지는 정리에서는 `recipe`를 살펴볼 예정이다. 이 패키지는 머신러닝에서 기본적으로 수행하는 여러 전처리 과정을 쉽게 할 수 있도록 도와주는 패키지이다. 이 과정을 통해서 전처리 과정이 얼마나 간단하게 진행되어서 모델링 자체에 집중할 수 있게 되는지 한 번 파악해보자.
-
