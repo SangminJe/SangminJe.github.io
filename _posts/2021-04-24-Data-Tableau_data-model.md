@@ -10,6 +10,8 @@ comments: true
 
 > 이 장은 태블로의 데이터 모델에 대해서 설명합니다.
 
+---
+
 ## 1. 태블로 조인과 관계
 <u>테이블의 조인과 관계는 다릅니다.</u> 현재는 관계(Relation)이 기본설정입니다.
 - [테이블 조인과 관계](https://help.tableau.com/v2021.1/public/desktop/ko-kr/datasource_relationships_learnmorepage.htm#WhereAreJoins)
@@ -20,7 +22,7 @@ comments: true
 그럼 조인은 어떻게 구현할까요?  조인은 아래 그림과 같이 테이블을 누르고 열기버튼을 눌러 직접 구성할 수 있습니다.
 ![워크시트](https://sangminje.github.io/assets/img/tableau/data_model_singletable_joins.gif)
 
-
+---
 
 ## 2. 태블로 관계(Relation) 만들기
 
