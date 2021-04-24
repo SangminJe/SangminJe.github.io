@@ -6,5 +6,5 @@ menu: true
 submenu: true
 order: 2
 description: >
-  영화/책 리뷰
+  영화/책 등을 리뷰합니다.
 ---

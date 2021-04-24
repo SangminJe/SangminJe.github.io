@@ -6,5 +6,5 @@ menu: true
 submenu: true
 order: 1
 description: >
-  Data Science 관련
+  Data Science 관련 주제를 다룹니다.
 ---

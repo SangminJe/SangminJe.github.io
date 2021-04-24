@@ -29,12 +29,12 @@ comments: true
 태블로에서 워크시트를 설명하겠습니다.
 엑셀에 데이터를 로드했다면 그림과 같이 로드된 데이터를 볼 수 있습니다.
 
-1. 워크시트로 가기
+#### 1. 워크시트로 가기
 
-![워크시트](img/tableau/tableadu_interface1.png)
+![워크시트](https://sangminje.github.io/assets/img/tableau/tableadu_interface1.png)
 - 아래 워크시트로 가기를 누르면 로드한 데이터에서 그래프를 그릴 수 있는 워크시트 화면으로 이동합니다.
 
-2. Card & Shelves / Side bar
+#### 2. Card & Shelves / Side bar
 
 ![워크시트](https://sangminje.github.io/assets/img/tableau/tableadu_interface2.png)
 
@@ -43,12 +43,12 @@ comments: true
     - 데이터 : **Dimension**과 **Measure**로 나누어져 있으며 각각 문자열 데이터와 숫자형 데이터가 위치합니다.
     - 분석 : 통계치와 같은 데이터를 손쉽게 추가할 수 있는 메뉴입니다.
 
-3. 새 워크시트 추가
+#### 3. 새 워크시트 추가
 
 ![워크시트](https://sangminje.github.io/assets/img/tableau/tableadu_interface3.png)
 - 표시된 부분을 참고하면 새로운 워크시트를 추가할 수 있습다.
 
-4. 시트
+#### 4. 시트
 
 ![워크시트](https://sangminje.github.io/assets/img/tableau/tableadu_interface4.png)
 
@@ -62,10 +62,8 @@ comments: true
 - 그러면 **차트추천**란이 활성화 되며 차트 후보군을 보여줍니다.
 - 여기서 원하는 차트를 선택하면 차트가 변경됩니다.
 
-5. 워크시트 클라우드에 저장
+#### 5. 워크시트 클라우드에 저장
 
 ![워크시트](https://sangminje.github.io/assets/img/tableau/tableadu_interface6.png)
 
 - 해당 워크시트를 클라우드에 저장하는 방법입니다.
-
----

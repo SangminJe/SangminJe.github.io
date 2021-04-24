@@ -26,14 +26,14 @@ comments: true
 
 ## 2. 태블로 관계(Relation) 만들기
 
-![워크시트](https://sangminje.github.io/assets/img/tableau/tableau_datamodel1.png)
+![데이터모델](https://sangminje.github.io/assets/img/tableau/tableau_datamodel1.png)
 태블로에서 **데이터 원본**을 클릭하면 엑셀시트 목록이 보입니다. 두 개의 시트를 가져다 놓으면, 태블로에서 자동으로 공통 필드를 찾아내서 조인을 만들어줍니다.
 - 여기서는 **ProductCategoryKey**가 공통키로 자동으로 설정되어 있음을 알 수 있습니다.
 
 
-![워크시트](https://sangminje.github.io/assets/img/tableau/tableau_datamodel3.png)
+![워크시트3](https://sangminje.github.io/assets/img/tableau/tableau_datamodel3.png)
 여기에 추가적으로 **Product**시트도 추가해줍니다. 그러면 ProductSubCategory 테이블을 중심으로 키를 생성해줍니다.
 
-![워크시트](https://sangminje.github.io/assets/img/tableau/tableau_datamodel2.png)
+![워크시트4](https://sangminje.github.io/assets/img/tableau/tableau_datamodel2.png)
 마지막으로 데이터를 중심으로 화면을 봐줍니다.
 
