@@ -31,12 +31,12 @@ comments: true
 
 1. 워크시트로 가기
 
-![워크시트](img\tableau\tableadu_interface1.png)
+![워크시트](img/tableau/tableadu_interface1.png)
 - 아래 워크시트로 가기를 누르면 로드한 데이터에서 그래프를 그릴 수 있는 워크시트 화면으로 이동합니다.
 
 2. Card & Shelves / Side bar
 
-![워크시트](img\tableau\tableadu_interface2.png)
+![워크시트](https://sangminje.github.io/assets/img/tableau/tableadu_interface2.png)
 
 - Card & Shelves는 데이터의 행과 열을 정하는 곳입니다. 데이터를 끌어와서 행과 열을 정의할 수 있습니다.
 - Sidebar에는 데이터와 분석 란이 있습니다.
@@ -45,17 +45,17 @@ comments: true
 
 3. 새 워크시트 추가
 
-![워크시트](img\tableau\tableadu_interface3.png)
+![워크시트](https://sangminje.github.io/assets/img/tableau/tableadu_interface3.png)
 - 표시된 부분을 참고하면 새로운 워크시트를 추가할 수 있습다.
 
 4. 시트
 
-![워크시트](img\tableau\tableadu_interface4.png)
+![워크시트](https://sangminje.github.io/assets/img/tableau/tableadu_interface4.png)
 
 - 해당 시트에 직접 그래프를 끌어다 넣을 수 있습니다.
   <br>
   <br>
-![워크시트](img\tableau\tableadu_interface5.png)
+![워크시트](https://sangminje.github.io/assets/img/tableau/tableadu_interface5.png)
 
 - 측정값을 열에다가 놓습니다.
 - ProductCategoryName을 행에다가 놓습니다.
@@ -64,7 +64,7 @@ comments: true
 
 5. 워크시트 클라우드에 저장
 
-![워크시트](img\tableau\tableadu_interface6.png)
+![워크시트](https://sangminje.github.io/assets/img/tableau/tableadu_interface6.png)
 
 - 해당 워크시트를 클라우드에 저장하는 방법입니다.
 

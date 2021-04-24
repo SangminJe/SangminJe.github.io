@@ -7,7 +7,7 @@ tags: Data ML tidymodels parsnip 타이디모델 R-machine-learning
 comments: true  
 ---  
 
->본 문서는 Tidymodel에 대해 공부하고 프로세스를 익히는 것에 목적이 있습니다.
+> 본 문서는 Tidymodel에 대해 공부하고 프로세스를 익히는 것에 목적이 있습니다.
 
 
 - 목차
