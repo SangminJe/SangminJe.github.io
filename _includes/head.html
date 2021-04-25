@@ -9,7 +9,10 @@
 <meta property="og:title" content="{{ page.title }}">
 <meta property="og:type" content="article">
 
-<link href="https://sangminje.github.io/assets/css/syntax_te.css" rel="stylesheet" >
+<!--  코드블럭 스타일과 폰트 추가 -->
+<link href="https://sangminje.github.io/assets/css/syntax.css" rel="stylesheet" >
+<link href="http://cdn.jsdelivr.net/gh/joungkyun/font-d2coding/d2coding.css" rel="stylesheet" type="text/css">
+
 
 {% for tag_slug in page.tags %}
   {% unless tag.header-img %}
