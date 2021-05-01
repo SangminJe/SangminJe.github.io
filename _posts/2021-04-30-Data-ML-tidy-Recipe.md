@@ -7,36 +7,34 @@ tags: Data ML tidymodels Recipe tidymodels-recipe 타이디모델-레시피 R-ma
 comments: true  
 ---  
 
-
-
 ## 개요
 
 > 1.  Recipe의 전반적인 개념에 대해서 설명합니다.
 > 2.  본 문서는 tidymodels [공식 영문서](https://www.tidymodels.org/start/recipes/)를 참고로 만들었습니다.
+> 3. 이전포스트 - [Tidymodel로 모델 만들기](https://sangminje.github.io/_posts/2021-04-22-Data-ML-tidy-build-a-model.md)
 
 
-## 이전 포스트
-- [Tidymodel로 모델 만들기](2021-04-22-Data-ML-tidy-build-a-model.md)
 
-## 목차
+- 목차
+  - [1. Recipe란](#recipe)
+  - [2. Flight Data](#flight-data)
+  - [3. Data Spliting](#data-spliting)
+  - [4. Recipe와 Role](#recipe와-role)
+  - [5. Recipe 모델적합](#recipe-모델적합)
+  - [6. 예측(Predicttion)](#예측prediction)
+  - [7. 모델평가(Evaluation)](#모델평가evaluation)
 
--   [1. recipe란](#Recipe란)
--   [2. Flight Data](#Flight-Data)
--   [3. Data Spliting](#Data-Spliting)
--   [4. Recipe와 Role](#Recipe와-Role)
--   [5. Recipe 모델적합](#Recipe-모델적합)
--   [6. 예측(Predicttion)](#예측(Predicttion))
--   [7. 모델평가(Evaluation)](#모델평가(Evaluation))
+## Recipe
+---
 
-## Recipe란
 
 `Recipe`는 머신러닝 프로세스에서 **데이터의 전처리**를 도와주는 `tidymodel`의 전처리 패키지입니다. 아래와 같은 기능을 포함합니다.
-    - Qualitative Variable(질적 변수)의 **dummy Variable(더미변수)** 로의 변환(질적 변수는 Categorical Variable로 부르기도 합니다.)
-    - **Feature Scaling** 
-    - 서로 다른 단위를 가지고 있는 데이터를 정규화해주는 과정 
-    - 한 번에 모든 Variable을 변경 
-    - **Key Feature**만 뽑아내기 
-    - [참고자료](https://www.tidymodels.org/start/recipes/)
+  - Qualitative Variable(질적 변수)의 **dummy Variable(더미변수)** 로의 변환(질적 변수는 Categorical Variable로 부르기도 합니다.)
+  - **Feature Scaling** 
+  - 서로 다른 단위를 가지고 있는 데이터를 정규화해주는 과정 
+  - 한 번에 모든 Variable을 변경 
+  - **Key Feature**만 뽑아내기 
+  - [참고자료](https://www.tidymodels.org/start/recipes/)
 
 ``` r
 library(tidymodels)      # 기본 패키지
@@ -48,8 +46,7 @@ library(skimr)           # 데이터 구조 살필 때 필요한 패키지
 <br>
 
 ## Flight Data
-
-------------------------------------------------------------------------
+---
 
 flights 데이터는 뉴욕의 비행 출발/도착과 관련된 데이터입니다. <u>이 데이터를 통해서 어떤 비행기가 30분 연착할 지를 예측해보는 과정을 수행해보겠습니다.</u>
 
@@ -98,9 +95,6 @@ weather
 
 <br>
 
-#### 데이터 로드
-
-
 데이터를 로드해보겠습니다.
 
 ``` r
@@ -140,9 +134,6 @@ flight_data %>%
 
 <br>
 
-#### 데이터 체크
-
-
 - 우리는 비행기의 연착 여부를 종속변수로 하므로, **Logistic Regression**을 수행해야 함을 염두해둡시다.
 - `skim`이라는 함수를 통해서 데이터의 구조를 편하게 파악할 수 있습니다.
 
@@ -176,9 +167,9 @@ Data summary
 - 이후 분석 과정에서 치환 과정을 차차 다루겠습니다.
 
 <br>
-## Data Spliting
 
-------------------------------------------------------------------------
+## Data Spliting
+---
 
 ``` r
 # Random 결과를 Fixing
@@ -196,8 +187,7 @@ test_data <- testing(data_split)
 <br>
 
 ## Recipe와 Role
-
-------------------------------------------------------------------------
+---
 
 ``` r
 flights_rec <- 
@@ -238,8 +228,7 @@ summary(flights_rec)
 <br>
 
 ## Feature Engineering
-
-------------------------------------------------------------------------
+---
 
 **Feature Engineering**은 머신러닝의 중요한 단계입니다. **Feature Engineering**이란 기존 데이터에서 유용한 컬럼을 뽑아내거나, 정제해내서 새로운 컬럼을 만들어 모델링을 향상시키는 활동을 의미합니다. 이 데이터에는 `date` 컬럼이 있습니다. 이는 날짜 데이터이며 `type`역시 날짜로 되어 있습니다.
 
@@ -264,12 +253,12 @@ flight_data %>%
     ## 10 2013-01-10        15715
     ## # ... with 354 more rows
 
+
 1. `distinct`를 통해서 유일한 데이터만 골라냅니다.
 2. `as.numeric`을 통해서 날짜 타입인 데이터를 숫자로 바꿔줍니다.
+  - 이렇게 하는 이유는 날짜의 숫자형 데이터가 **modeling**과정에서 도움이 될 수 있기 때문입니다.(log odds비 등)
 
-- 이렇게 하는 이유는 숫자형 데이터가 **modeling**과정에서 도움이 될 수 있기 때문입니다.(log odds비 등)
-
-3. `date`자체를 사용하는 것도 좋지만, `date`에서 파생되는 *년, 월, 주, 요일* 등의 데이터로도 좋은 인사이트를 얻을 수 있습니다다.
+3. `date`자체를 사용하는 것도 좋지만, `date`에서 파생되는 *년, 월, 주, 요일* 등의 데이터로도 좋은 인사이트를 얻을 수 있습니다.
 
 -   이런 과정이 **Feature Engineering**입니다. 원래 있는 데이터에서 새로운 데이터를 만들어내는 것!
 
@@ -283,13 +272,11 @@ flights_rec <-
 ```
 
 1. [`step_date()`](https://recipes.tidymodels.org/reference/step_date.html)는 **Date Feature Genrator**라고 불리우는 `recipe`의 함수입니다.
-
-- 말 그대로 날짜를 생성하는 역할을 수행합니다.
-- `dow`는 **day of week**으로 요일을 의미하고, `month`는 당연히 월을 의미하겠죠?
+  - 말 그대로 날짜를 생성하는 역할을 수행합니다.
+  - `dow`는 **day of week**으로 요일을 의미하고, `month`는 당연히 월을 의미하겠죠?
 
 2. [`step_holiday()`](https://recipes.tidymodels.org/reference/step_holiday.html)함수는 휴일을 **binary**(또는 플래그) 형식으로 표현해주는 함수입니다.
-
-- 한국 공휴일을 사용하는 방법이 있을까요? 해당 내용은 나중에 찾으면 추가하겠습니다.
+  - 한국 공휴일을 사용하는 방법이 있을까요? 해당 내용은 나중에 찾으면 추가하겠습니다.
 
 3. `step_rm()`을 통해 더이상 모델이 포함되길 원치 않는 `date`컬럼을 삭제합니다.
 
@@ -355,8 +342,7 @@ flights_rec <-
 <br>
 
 ## Recipe 모델적합
-
-------------------------------------------------------------------------
+---
 
 
 #### Logistic Fitting
@@ -372,13 +358,12 @@ lr_mod <-
 
 이제 세 단계를 거쳐서 모델적합을 수행합니다.
 
-1.  `Recipe`로 Training_Set 처리하기
+1. `Recipe`로 Training_Set 처리하기
+  - 어떤 변수가 **dummy variable**이 되는지를 결정합니다.
+  - 또한 어떤 변수가 **zero-variance**가 되어야 하는지를 결정합니다.
 
--   어떤 변수가 **dummy variable**이 되는지를 결정합니다.
--   또한 어떤 변수가 **zero-variance**가 되어야 하는지를 결정합니다.
-
-1.  `Recipe`를 Training_Set에 적용하기
-2.  `Recipe`를 Testing_Set에 적용하기
+2. `Recipe`를 Training_Set에 적용하기
+3. `Recipe`를 Testing_Set에 적용하기
 
 -   새로이 계산되거나 적용되는 것 없이 Training_Set에서의 **dummy variable**의 결과와 **zero-variance**의 결과가 Testing_Set에 적용됩니다.
 
@@ -463,7 +448,7 @@ flights_fit %>%
 <br>
 
 
-## 예측(Predicttion)
+## 예측(Prediction)
 
 ------------------------------------------------------------------------
 
