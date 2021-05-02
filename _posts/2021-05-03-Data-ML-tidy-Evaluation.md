@@ -9,7 +9,7 @@ comments: true
 
 ## 개요
 
-> 1.  모델 평가의 기준과 교차 검증에 대해서 배웁니다..
+> 1.  모델 평가의 기준과 교차 검증에 대해서 배웁니다.
 > 2.  본 문서는 tidymodels [공식 영문서](https://www.tidymodels.org/start/resampling/)를 참고로 만들었습니다.
 
 - 이전 포스트
