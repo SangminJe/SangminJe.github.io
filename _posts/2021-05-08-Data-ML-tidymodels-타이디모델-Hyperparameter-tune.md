@@ -2,7 +2,7 @@
 layout: post  
 title: "Tidymodels로 시작하는 머신러닝 (4)"
 subtitle: "4. Hyperparameter 튜닝"  
-categories: Data  
+categories: Data  w
 tags: Data ML tidymodels fold tidymodels-recipe 타이디모델 R-machine-learning R Cross-Validation 교차검증
 comments: true  
 ---  
@@ -15,7 +15,7 @@ comments: true
   - [1. Build a Model](https://sangminje.github.io/data/2021/04/22/Data-ML-tidymodels-타이디모델-build-a-model/)
   - [2. Recipe](https://sangminje.github.io/data/2021/04/30/Data-ML-tidymodels-타이디모델-Recipe/)
   - [3. Evaluation](https://sangminje.github.io/data/2021/05/03/Data-ML-tidymodels-타이디모델-Evaluation/)
-  - [4. Hyperparameter Tuning](https://sangminje.github.io/data/2021/05/03/Data-ML-tidymodels-타이디모델-Hyperparameter-tune/)
+  - [4. Hyperparameter Tuning](https://sangminje.github.io/data/2021/05/08/Data-ML-tidymodels-타이디모델-Hyperparameter-tune/)
 
 
   
