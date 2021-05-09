@@ -12,9 +12,11 @@ comments: true
 > 1.  모델 평가의 기준과 교차 검증에 대해서 배웁니다.
 > 2.  본 문서는 tidymodels [공식 영문서](https://www.tidymodels.org/start/resampling/)를 참고로 만들었습니다.
 
-- 이전 포스트
-  - [1. Build a Model](https://sangminje.github.io/_posts/2021-04-22-Data-ML-tidy-build-a-model.md)
-  - [2. Recipe](https://sangminje.github.io/_posts/2021-04-30-Data-ML-tidy-Recipe.md)
+- 관련 포스트
+  - [1. Build a Model](https://sangminje.github.io/data/2021/04/22/Data-ML-tidymodels-타이디모델-build-a-model/)
+  - [2. Recipe](https://sangminje.github.io/data/2021/04/30/Data-ML-tidymodels-타이디모델-Recipe/)
+  - [3. Evaluation](https://sangminje.github.io/data/2021/05/03/Data-ML-tidymodels-타이디모델-Evaluation/)
+  - [4. Hyperparameter Tuning](https://sangminje.github.io/data/2021/05/03/Data-ML-tidymodels-타이디모델-Hyperparameter-tune/)
 
   
 - 목차

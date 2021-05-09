@@ -3,7 +3,7 @@ layout: post
 title: "Tidymodels로 시작하는 머신러닝 (2)"
 subtitle: "2. 데이터 전처리(Recipe & Workflow)"  
 categories: Data  
-tags: Data ML tidymodels Recipe tidymodels-recipe 타이디모델-레시피 R-machine-learning 
+tags: Data ML tidymodels Recipe tidymodels-recipe 타이디모델-레시피 R-machine-learning R
 comments: true  
 ---  
 
@@ -13,6 +13,11 @@ comments: true
 > 2.  본 문서는 tidymodels [공식 영문서](https://www.tidymodels.org/start/recipes/)를 참고로 만들었습니다.
 > 3. 이전포스트 - [Tidymodel로 모델 만들기](https://sangminje.github.io/_posts/2021-04-22-Data-ML-tidy-build-a-model.md)
 
+- 관련 포스트
+  - [1. Build a Model](https://sangminje.github.io/data/2021/04/22/Data-ML-tidymodels-타이디모델-build-a-model/)
+  - [2. Recipe](https://sangminje.github.io/data/2021/04/30/Data-ML-tidymodels-타이디모델-Recipe/)
+  - [3. Evaluation](https://sangminje.github.io/data/2021/05/03/Data-ML-tidymodels-타이디모델-Evaluation/)
+  - [4. Hyperparameter Tuning](https://sangminje.github.io/data/2021/05/03/Data-ML-tidymodels-타이디모델-Hyperparameter-tune/)
 
 
 - 목차
@@ -525,7 +530,7 @@ flights_pred %>%
   autoplot()
 ```
 
-![](https://sangminje.github.io/assets/img/2.Recipe_files/figure-markdown_github/ROC-1.png)
+![roc](https://sangminje.github.io/assets/img/2.Recipe_files/figure-markdown_github/ROC-1.png)
 
 #### ROC_AUC
 
