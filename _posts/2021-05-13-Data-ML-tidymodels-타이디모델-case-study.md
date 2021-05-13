@@ -1,3 +1,12 @@
+---  
+layout: post  
+title: "Tidymodels로 시작하는 머신러닝 (5)"
+subtitle: "5. Case Study"  
+categories: Data
+tags: Data ML tidymodels fold tidymodels-recipe 타이디모델 R-machine-learning case-study 교차검증
+comments: true  
+---  
+
 ## 개요
 
 > 1.  Case Study를 통해 지금까지 익혔던 Tidymodel을 복습합니다.
