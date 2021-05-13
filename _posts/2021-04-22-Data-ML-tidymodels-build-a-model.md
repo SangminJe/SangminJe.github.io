@@ -11,11 +11,12 @@ comments: true
 > Tidymodel의 모델 빌딩에 대해서 살펴봅니다.
 
 - 관련 포스트
-  - [1. Build a Model](https://sangminje.github.io/data/2021/04/22/Data-ML-tidymodels-타이디모델-build-a-model/)
-  - [2. Recipe](https://sangminje.github.io/data/2021/04/30/Data-ML-tidymodels-타이디모델-Recipe/)
-  - [3. Evaluation](https://sangminje.github.io/data/2021/05/03/Data-ML-tidymodels-타이디모델-Evaluation/)
-  - [4. Hyperparameter Tuning](https://sangminje.github.io/data/2021/05/08/Data-ML-tidymodels-타이디모델-Hyperparameter-tune/)
-
+  - [1. Build a Model](https://sangminje.github.io/data/2021/04/22/Data-ML-tidymodels-build-a-model/)
+  - [2. Recipe](https://sangminje.github.io/data/2021/04/30/Data-ML-tidymodels-Recipe/)
+  - [3. Evaluation](https://sangminje.github.io/data/2021/05/03/Data-ML-tidymodels-Evaluation/)
+  - [4. Hyperparameter Tuning](https://sangminje.github.io/data/2021/05/08/Data-ML-tidymodels-hyperparameter-tune/)
+  - [5. Case Study](https://sangminje.github.io/data/2021/05/08/Data-ML-tidymodels-case-study/)
+d
 - 목차
     - [1. 라이브러리 로드](#라이브러리-로드)
     - [2. 데이터 로드](#데이터-로드)

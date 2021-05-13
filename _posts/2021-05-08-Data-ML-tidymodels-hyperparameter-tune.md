@@ -2,7 +2,7 @@
 layout: post  
 title: "Tidymodels로 시작하는 머신러닝 (4)"
 subtitle: "4. Hyperparameter 튜닝"  
-categories: Data  w
+categories: Data
 tags: Data ML tidymodels fold tidymodels-recipe 타이디모델 R-machine-learning R Cross-Validation 교차검증
 comments: true  
 ---  
@@ -12,10 +12,12 @@ comments: true
 > 2.  [Tidymodels - Tune Model Parameters](https://www.tidymodels.org/start/tuning/) 공식 영문서를 참고하여 만들었습니다.
 
 - 관련 포스트
-  - [1. Build a Model](https://sangminje.github.io/data/2021/04/22/Data-ML-tidymodels-타이디모델-build-a-model/)
-  - [2. Recipe](https://sangminje.github.io/data/2021/04/30/Data-ML-tidymodels-타이디모델-Recipe/)
-  - [3. Evaluation](https://sangminje.github.io/data/2021/05/03/Data-ML-tidymodels-타이디모델-Evaluation/)
-  - [4. Hyperparameter Tuning](https://sangminje.github.io/data/2021/05/08/Data-ML-tidymodels-타이디모델-Hyperparameter-tune/)
+  - [1. Build a Model](https://sangminje.github.io/data/2021/04/22/Data-ML-tidymodels-build-a-model/)
+  - [2. Recipe](https://sangminje.github.io/data/2021/04/30/Data-ML-tidymodels-Recipe/)
+  - [3. Evaluation](https://sangminje.github.io/data/2021/05/03/Data-ML-tidymodels-Evaluation/)
+  - [4. Hyperparameter Tuning](https://sangminje.github.io/data/2021/05/08/Data-ML-tidymodels-hyperparameter-tune/)
+  - [5. Case Study](https://sangminje.github.io/data/2021/05/08/Data-ML-tidymodels-case-study/)
+
 
 
   
@@ -264,7 +266,7 @@ tree_res %>%
 
 ![graph_1](https://sangminje.github.io/assets/img/4.Tune_files/figure-markdown_github/Graphs-1.png)
 
-가장 아래에 있는 모델은 tree가 하나일 때입니다. 가장 안좋은 성능을 보이는 것 같네요. 반대로 tree가 4인 모델이 가장 좋은 성능을 보이는 것 같습니다. `show_best()`함수로 가장 좋은 모델을 추려낼 수 있습니다.
+가장 아래에 있는 모델은 tree가 하나일 때입니다. 가장 안좋은 성능을 보이는 것 같네요. 반대로 tree가 8인 모델이 가장 좋은 성능을 보이는 것 같습니다. `show_best()`함수로 가장 좋은 모델을 추려낼 수 있습니다.
 
 ``` r
 tree_res %>%

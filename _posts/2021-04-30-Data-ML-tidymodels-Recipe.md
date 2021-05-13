@@ -14,10 +14,12 @@ comments: true
 > 3. 이전포스트 - [Tidymodel로 모델 만들기](https://sangminje.github.io/_posts/2021-04-22-Data-ML-tidy-build-a-model.md)
 
 - 관련 포스트
-  - [1. Build a Model](https://sangminje.github.io/data/2021/04/22/Data-ML-tidymodels-타이디모델-build-a-model/)
-  - [2. Recipe](https://sangminje.github.io/data/2021/04/30/Data-ML-tidymodels-타이디모델-Recipe/)
-  - [3. Evaluation](https://sangminje.github.io/data/2021/05/03/Data-ML-tidymodels-타이디모델-Evaluation/)
-  - [4. Hyperparameter Tuning](https://sangminje.github.io/data/2021/05/08/Data-ML-tidymodels-타이디모델-Hyperparameter-tune/)
+  - [1. Build a Model](https://sangminje.github.io/data/2021/04/22/Data-ML-tidymodels-build-a-model/)
+  - [2. Recipe](https://sangminje.github.io/data/2021/04/30/Data-ML-tidymodels-Recipe/)
+  - [3. Evaluation](https://sangminje.github.io/data/2021/05/03/Data-ML-tidymodels-Evaluation/)
+  - [4. Hyperparameter Tuning](https://sangminje.github.io/data/2021/05/08/Data-ML-tidymodels-hyperparameter-tune/)
+  - [5. Case Study](https://sangminje.github.io/data/2021/05/08/Data-ML-tidymodels-case-study/)
+
 
 
 - 목차
@@ -328,9 +330,11 @@ test_data %>%
     ## # A tibble: 0 x 1
     ## # ... with 1 variable: dest <fct>
 
--   **Training_Set**에 `recipe`를 적용하면 **factor level**이 flight_data(training_set이 아님)에서 나오기 때문에 **LEX**에 대한 컬럼이 만들어지지만, 이 열에는 모두 0이 나오게 됩니다. 
-    -   이 부분을 이해하는 게 중요합니다. 비록 앞에서는 데이터를 train_data로 특정했지만, `recipe`는 원본 데이터인 flight_data에서 참조하여 **dummy variable**을 발생시킨다는 말입니다.
--   이는 **Zero Variance Predictor**라고 불리며, 일부 R 함수는 이 **Predictor**에 대해 오류를 발생시키지 않지만 일반적으로 경고 및 기타 문제를 유발하기도 합니다.
+-   **Training_Set**에 `recipe`를 적용하면 **factor level**이 flight_data(training_set이 아님)에서 나오기 때문에 **LEX**에 대한 컬럼이 만들어지지만, 이 열에는 모두 0이 나오게 됩니다.
+    - <2021.05.13 추가> Set.seed 설정 실패로 __LEX__가 검출되지 않는 결과가 나왔습니다 :< 나왔다고 가정하고 생각해주세요!
+  
+    <!-- -   이 부분을 이해하는 게 중요합니다. 비록 앞에서는 데이터를 train_data로 특정했지만, `recipe`는 원본 데이터인 flight_data에서 참조하여 **dummy variable**을 발생시킨다는 말입니다. -->
+-   이는 **Zero Variance Predictor**라고 불리며,  경우에 따라 경고 및 기타 문제를 유발하기도 합니다.
 -   따라서 [`step_zv()`](https://www.rdocumentation.org/packages/recipes/versions/0.1.16/topics/step_zv)를 통해 **training_set**에 단일 값이 있을 때 데이터에서 컬럼을 제거합니다.
 -   `step_dummy()` 이후에 적용 시켜 줍니다.
 

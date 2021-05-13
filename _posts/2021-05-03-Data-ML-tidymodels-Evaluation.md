@@ -13,10 +13,12 @@ comments: true
 > 2.  본 문서는 tidymodels [공식 영문서](https://www.tidymodels.org/start/resampling/)를 참고로 만들었습니다.
 
 - 관련 포스트
-  - [1. Build a Model](https://sangminje.github.io/data/2021/04/22/Data-ML-tidymodels-타이디모델-build-a-model/)
-  - [2. Recipe](https://sangminje.github.io/data/2021/04/30/Data-ML-tidymodels-타이디모델-Recipe/)
-  - [3. Evaluation](https://sangminje.github.io/data/2021/05/03/Data-ML-tidymodels-타이디모델-Evaluation/)
-  - [4. Hyperparameter Tuning](https://sangminje.github.io/data/2021/05/08/Data-ML-tidymodels-타이디모델-Hyperparameter-tune/)
+  - [1. Build a Model](https://sangminje.github.io/data/2021/04/22/Data-ML-tidymodels-build-a-model/)
+  - [2. Recipe](https://sangminje.github.io/data/2021/04/30/Data-ML-tidymodels-Recipe/)
+  - [3. Evaluation](https://sangminje.github.io/data/2021/05/03/Data-ML-tidymodels-Evaluation/)
+  - [4. Hyperparameter Tuning](https://sangminje.github.io/data/2021/05/08/Data-ML-tidymodels-hyperparameter-tune/)
+  - [5. Case Study](https://sangminje.github.io/data/2021/05/08/Data-ML-tidymodels-case-study/)
+
 
   
 - 목차
@@ -222,7 +224,7 @@ rf_mod <-
   set_mode('classification')
 ```
 - `parsnip`패키지를 활용하여 Random Forest 모델을 만듭니다.
-- [`ranger`](https://cran.r-project.org/web/packages/ranger/ranger.pdf)
+- [`ranger`](https://cran.r-project.org/web/packages/ranger/ranger.pdf) 패키지를 엔진으로 설정합니다.
 - `set_mode`는 Classification으로 설정합니다.
 
 #### Fitting
