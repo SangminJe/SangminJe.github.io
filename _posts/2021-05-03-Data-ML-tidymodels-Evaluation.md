@@ -17,7 +17,7 @@ comments: true
   - [2. Recipe](https://sangminje.github.io/data/2021/04/30/Data-ML-tidymodels-Recipe/)
   - [3. Evaluation](https://sangminje.github.io/data/2021/05/03/Data-ML-tidymodels-Evaluation/)
   - [4. Hyperparameter Tuning](https://sangminje.github.io/data/2021/05/08/Data-ML-tidymodels-hyperparameter-tune/)
-  - [5. Case Study](https://sangminje.github.io/data/2021/05/08/Data-ML-tidymodels-case-study/)
+  - [5. Case Study](https://sangminje.github.io/data/2021/05/13/Data-ML-tidymodels-case-study/)
 
 
   
