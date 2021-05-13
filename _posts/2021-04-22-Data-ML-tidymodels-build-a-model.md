@@ -16,7 +16,7 @@ comments: true
   - [3. Evaluation](https://sangminje.github.io/data/2021/05/03/Data-ML-tidymodels-Evaluation/)
   - [4. Hyperparameter Tuning](https://sangminje.github.io/data/2021/05/08/Data-ML-tidymodels-hyperparameter-tune/)
   - [5. Case Study](https://sangminje.github.io/data/2021/05/13/Data-ML-tidymodels-case-study/)
-d
+
 - 목차
     - [1. 라이브러리 로드](#라이브러리-로드)
     - [2. 데이터 로드](#데이터-로드)
