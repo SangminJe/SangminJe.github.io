@@ -126,13 +126,13 @@ hotels %>%
     ## 1 children  4038 0.0808
     ## 2 none     45962 0.919
 
--   자녀를 대동한 숙박은 __8.1%__밖에 되지 않습니다. 반대의 경우는 91.9% 이군요.
+-   자녀를 대동한 숙박은 **8.1%**밖에 되지 않습니다. 반대의 경우는 91.9% 이군요.
 -   이런 데이터의 불균형은 분석에 안좋은 영향을 줄 수 있습니다.
 -   그래서 `recipe`에는 `upsample`이나 `downsample`을 사용해서 이런 불균형을 해결하겠습니다.
 
 ## Data Split
 
-우리는 이전 과정에서 배웠던 계층화표본추출을 사용해서 데이터를 나누겠습니다. 계층분화 기준은 __children__입니다. - [계층화추출 복습](https://sangminje.github.io/data/2021/05/03/Data-ML-tidymodels-타이디모델-Evaluation/)
+우리는 이전 과정에서 배웠던 계층화표본추출을 사용해서 데이터를 나누겠습니다. 계층분화 기준은 **children**입니다. - [계층화추출 복습](https://sangminje.github.io/data/2021/05/03/Data-ML-tidymodels-타이디모델-Evaluation/)
 
 ``` r
 set.seed(123)
@@ -155,8 +155,8 @@ hotel_other %>%
 
 -   계층화 추출이 잘 된 모습입니다.
 
-[Evaluation](https://sangminje.github.io/data/2021/05/03/Data-ML-tidymodels-타이디모델-Evaluation/)에서는
-__10-fold 교차검증(cross_validation)__을 수행하기 위해 `rsample::vfold_cv()`함수를 사용했습니다. 이번에는 교차검증보다 한 개의 Validation Set을 만들도록 하겠습니다. 이는 __hotel_other__의 37500개의 Row 중에서 추출되며 두 개의 데이터 셋을 생성합니다. 
+[Evaluation](https://sangminje.github.io/data/2021/05/03/Data-ML-tidymodels-Evaluation/)에서는
+**10-fold 교차검증(cross_validation)**을 수행하기 위해 `rsample::vfold_cv()`함수를 사용했습니다. 이번에는 교차검증보다 한 개의 Validation Set을 만들도록 하겠습니다. 이는 **hotel_other**의 37500개의 Row 중에서 추출되며 두 개의 데이터 셋을 생성합니다. 
 1. Training Set 
 2. Validation Set 
 이를 위해서 `validation_split`을 사용하겠습니다.
@@ -175,14 +175,14 @@ val_set
     ##   <list>               <chr>     
     ## 1 <split [30001/7499]> validation
 
--   `initial_split`과 마찬가지로 starta를 통해 __계층화표본추출__이 가능합니다.
+-   `initial_split`과 마찬가지로 starta를 통해 **계층화표본추출**이 가능합니다.
 -   이를 통해서 <u>원 데이터와 동일한 children의 비율</u>을 유지할 수 있습니다.
 
 ![validation split](https://sangminje.github.io/assets/img/5.-case_study_files/validation-split.svg)
 
 ## Penalized Logistinc Regression
 
-`childeren`이 범주형 변수이므로 __Logistic Regression__가 좋은 접근이 될 것 같습니다. `glmnet`의 패키지의 glm 모델을 사용하고, penalized MLE를 사용합니다. **Logistic Regression** 기울기 모수를 추정하는 이 방법은 프로세스에 대한 패널티를 사용하므로 관련성이 낮은 예측 변수가 0 값으로 유도됩니다. glmnet 모델 중 하나인 [**lasso
+`children`이 범주형 변수이므로 **Logistic Regression**가 좋은 접근이 될 것 같습니다. `glmnet`의 패키지의 glm 모델을 사용하고, penalized MLE를 사용합니다. **Logistic Regression** 기울기 모수를 추정하는 이 방법은 프로세스에 대한 패널티를 사용하므로 관련성이 낮은 예측 변수가 0 값으로 유도됩니다. glmnet 모델 중 하나인 [**lasso
 method**](https://rk1993.tistory.com/entry/Ridge-regression%EC%99%80-Lasso-regression-%EC%89%BD%EA%B2%8C-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0)가 패널티가 올라갈 때마다 slope를 0값으로 만들 수 있습니다. 
 - [참고링크](http://www.datamarket.kr/xe/index.php?mid=board_BoGi29&document_srl=7176&listStyle=viewer&page=9)
 
@@ -214,7 +214,7 @@ lr_recipe <-
 ```
 
 -   함수에 대한 설명은 [Recipe](https://sangminje.github.io/data/2021/04/30/Data-ML-tidymodels-타이디모델-Recipe/)에 있습니다.
--   __holiays__를 미리 설정하고 `step_holiday`단계에서 사용했습니다.
+-   **holiays**를 미리 설정하고 `step_holiday`단계에서 사용했습니다.
 -   `step_date`를 통해서 년, 월, 요일을 생성했습니다.
 
 #### Workflow 만들기
@@ -278,8 +278,8 @@ lr_res <-
             metrics = metric_set(roc_auc))
 ```
 
--   `control = control_grid(save_pred = T)`를 통해서 __val_set__안에 있는 validation set를 살려둡니다. 앞서 validation_split을 통해서 __val_set__안에는 training set과 validation set이 동시에 있습니다.
--   __roc_auc__를 통해 모델의 퍼포먼스를 측정합니다.
+-   `control = control_grid(save_pred = T)`를 통해서 **val_set**안에 있는 validation set를 살려둡니다. 앞서 validation_split을 통해서 **val_set**안에는 training set과 validation set이 동시에 있습니다.
+-   **roc_auc**를 통해 모델의 퍼포먼스를 측정합니다.
 
 penalty에 따른 ROC Curve를 시각화해봅시다.
 
@@ -349,11 +349,11 @@ autoplot(lr_auc)
 
 ## Tree Based Ensemble
 
-__Random foreset__는 비교적 유연하고 효율적인 모델입니다. 그리고 종속변수에 상관없이 적용가능 하고, 적은 전처리 과정이 소요되므로 많은 분석가들이 선호합니다. 그럼 __Random Forest__를 사용해서 모델링을 수행해보겠습니다.
+**Random foreset**는 비교적 유연하고 효율적인 모델입니다. 그리고 종속변수에 상관없이 적용가능 하고, 적은 전처리 과정이 소요되므로 많은 분석가들이 선호합니다. 그럼 **Random Forest**를 사용해서 모델링을 수행해보겠습니다.
 
 #### 모델 구축과 Training 시간 단축
 
-Random Forest는 Default 값의 Hyperparameter로도 준수한 결과를 냅니다. 이번에는 더 좋은 모델링을 위해서 튜닝을 수행하겠습니다. 이 과정의 단점은, Randon Forest에 사용되는 Tuning이 컴퓨팅 시간을 많이 소요한다는 점입니다. 이 단점을 보완하기 위해서 패키지에서 준비된 __일정 함수__를 사용하면, 모델 내에서 Computation을 core에 적절히 분할하여 할당할 수 있고, 이 결과로 Training 시간을 단축할 수 있습니다.  
+Random Forest는 Default 값의 Hyperparameter로도 준수한 결과를 냅니다. 이번에는 더 좋은 모델링을 위해서 튜닝을 수행하겠습니다. 이 과정의 단점은, Randon Forest에 사용되는 Tuning이 컴퓨팅 시간을 많이 소요한다는 점입니다. 이 단점을 보완하기 위해서 패키지에서 준비된 **일정 함수**를 사용하면, 모델 내에서 Computation을 core에 적절히 분할하여 할당할 수 있고, 이 결과로 Training 시간을 단축할 수 있습니다.  
 
 다만 이번에는 하나의 Validation Set만 있으므로, 굳이 병렬화하여 계산할 필요까지는 없습니다. 하지만 언젠가 병렬화해서 계산하려면 자신의 컴퓨터의 Core 수를 알고 있어야겠죠? 다행히도 R의 `parallel` 패키지에는 이를 도와주는 함수 `detectCores()`가 있습니다.
 
@@ -465,7 +465,7 @@ rf_res %>%
     ## 4     8    10 roc_auc binary     0.923     1      NA Preprocessor1_Model24
     ## 5     4    24 roc_auc binary     0.923     1      NA Preprocessor1_Model06
 
--   Random Forest의 튜닝 결과가 로직스틱 회귀의 성능인 __0.881__ 보다 훨씬 좋은 성능을 보여줍니다.
+-   Random Forest의 튜닝 결과가 로직스틱 회귀의 성능인 **0.881** 보다 훨씬 좋은 성능을 보여줍니다.
 
 결과를 시각화하겠습니다.
 
@@ -513,7 +513,7 @@ rf_res %>%
     ## 10 validation       0.00278       0.997    60     9    14 none     Preprocessor1_Model01
     ## # ... with 187,465 more rows
 
--   앞에 두 개의 __.pred__으로 시작하는 컬럼이 있습니다. 두 컬럼이 각각 어떤 확률을 가지고 있었는지를 나타내줍니다. 그리고 이 컬럼 중 높은 값이 종속변수의 결과값으로 선정됩니다.
+-   앞에 두 개의 **.pred**으로 시작하는 컬럼이 있습니다. 두 컬럼이 각각 어떤 확률을 가지고 있었는지를 나타내줍니다. 그리고 이 컬럼 중 높은 값이 종속변수의 결과값으로 선정됩니다.
 
 best random forest 모델을 사용하기 위해 `parameter`를 사용합니다.
 
@@ -541,9 +541,9 @@ bind_rows(rf_auc, lr_auc) %>%
 
 ## The Last Fit
 
-분석의 목표는 __어떤 호텔에 자녀와 같이 온 가족이 머무는지__에 대한 예측이었습니다. Random Forest 모델이 모든 면에서 나은 성적을 보이므로, Random Forest 모델을 사용하겠습니다. 가장 좋은 Hyperparameter를 사용한 모델로 Training Data(train + validation)을 사용하여 Testing Data를 예측합니다.
+분석의 목표는 **어떤 호텔에 자녀와 같이 온 가족이 머무는지**에 대한 예측이었습니다. Random Forest 모델이 모든 면에서 나은 성적을 보이므로, Random Forest 모델을 사용하겠습니다. 가장 좋은 Hyperparameter를 사용한 모델로 Training Data(train + validation)을 사용하여 Testing Data를 예측합니다.
 
-parsnip 모델부터 적용하겠습니다. 여기서 `importance = 'impurity'`라는 새로운 인자를 추가할 예정입니다. 이 인자는 __Variance Importance__를 제공해주며 어떤 변수가 모델에 영향을 주는지 확인할 수 있게 해줍니다.
+parsnip 모델부터 적용하겠습니다. 여기서 `importance = 'impurity'`라는 새로운 인자를 추가할 예정입니다. 이 인자는 **Variance Importance**를 제공해주며 어떤 변수가 모델에 영향을 주는지 확인할 수 있게 해줍니다.
 
 ``` r
 # Model
@@ -574,7 +574,7 @@ last_rf_fit
     ##   <list>                <chr>            <list>           <list>           <list>                <list>   
     ## 1 <split [37500/12500]> train/test split <tibble [2 x 4]> <tibble [0 x 1]> <tibble [12,500 x 6]> <workflo~
 
-위에서 작성한 workflow에는 모든 게 들어있습니다. Validation Set에서 나왔던 __ROC AUC__와 비슷한 값이 나올까요? 정리된 데이터를 뽑아내보겠습니다.
+위에서 작성한 workflow에는 모든 게 들어있습니다. Validation Set에서 나왔던 **ROC AUC**와 비슷한 값이 나올까요? 정리된 데이터를 뽑아내보겠습니다.
 
 ``` r
 last_rf_fit %>% 
@@ -627,10 +627,10 @@ last_rf_fit %>%
 
 #### 2. 앞으로의 계획
 
--   Tidymodels를 꾸준히 활용해서 __Kaggle__의 문제들을 해결해나갈 예정입니다. 해결해나가는 과정과 시행착오를 이 블로그에 꾸준히 여러분들과 공유하고 싶습니다.
--   __Python__이 확실히 머신러닝과 딥러닝에서는 대세를 잡은 것 같습니다. 아직은 시기상조이지만, 언젠가는 저도 파이썬을 배워서 다른 분석가, 또는 개발자들과 소통해야 하는 때가 오겠지요. 하지만 완벽히 __R__로 머신러닝의 프로세스를 익히고 파이썬을 보조로 사용하고 싶은 생각입니다.
--   __쏘프라이즈__라는 플랫폼을 접했습니다. 흥미로운 질문을 던지고, 그것을 데이터로 설명해야 하는 재미있는 프로젝트인 것 같습니다. 저 문제들을 함께 풀어보면서 __R__과 더 친해지고, 또 그 과정 역시 여기에 정리해볼게요 :)
+-   Tidymodels를 꾸준히 활용해서 **Kaggle**의 문제들을 해결해나갈 예정입니다. 해결해나가는 과정과 시행착오를 이 블로그에 꾸준히 여러분들과 공유하고 싶습니다.
+-   **Python**이 확실히 머신러닝과 딥러닝에서는 대세를 잡은 것 같습니다. 아직은 시기상조이지만, 언젠가는 저도 파이썬을 배워서 다른 분석가, 또는 개발자들과 소통해야 하는 때가 오겠지요. 하지만 완벽히 **R**로 머신러닝의 프로세스를 익히고 파이썬을 보조로 사용하고 싶은 생각입니다.
+-   **쏘프라이즈**라는 플랫폼을 접했습니다. 흥미로운 질문을 던지고, 그것을 데이터로 설명해야 하는 재미있는 프로젝트인 것 같습니다. 저 문제들을 함께 풀어보면서 **R**과 더 친해지고, 또 그 과정 역시 여기에 정리해볼게요 :)
 
 수고하셨습니다!
 
-__The End.__
+**The End.**
