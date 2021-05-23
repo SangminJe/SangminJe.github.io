@@ -9,8 +9,9 @@ comments: true
 
 ## 개요
 
-> 1.  Kaggle의 [House Price](https://www.kaggle.com/c/house-prices-advanced-regression-techniques) Competition을 참여합니다.
-> 2.  본 문서에서는 Tidyverse를 통한 EDA를 다룹니다.
+> 1. Kaggle의 [House Price](https://www.kaggle.com/c/house-prices-advanced-regression-techniques) Competition을 참여합니다.
+> 2. 본 문서에서는 Tidyverse를 통한 EDA를 다룹니다.
+> 3. 본 분석은 [슬기로운 통계생활](https://www.youtube.com/user/Leesak85) 채널을 운영하시는 **이삭**님의 Kaggle Study 2기에 참여하여 진행하였습니다.
 
 - tidymodels 공부 관련 포스트
   - [1. Build a Model](https://sangminje.github.io/data/2021/04/22/Data-ML-tidymodels-build-a-model/)
