@@ -2,7 +2,7 @@
 layout: post  
 title: "오즈비(Odds-ratio)란?"
 subtitle: "오즈비에 대해 이해하기"  
-categories: Data  
+categories: DATA  
 tags: Analytics odds-ratio 오즈비 오즈비란 오즈비-개념
 comments: true  
 ---  

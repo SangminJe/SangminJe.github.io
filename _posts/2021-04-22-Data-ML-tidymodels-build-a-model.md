@@ -2,7 +2,7 @@
 layout: post  
 title: "Tidymodels로 시작하는 머신러닝 (1)"
 subtitle: "1. 모델 만들기"  
-categories: Data  
+categories: DATA  
 tags: Data ML tidymodels parsnip 타이디모델 R-machine-learning 
 comments: true  
 ---  

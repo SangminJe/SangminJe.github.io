@@ -2,7 +2,7 @@
 layout: post  
 title: "Qlik - SubRoutine(서브루틴)"
 subtitle: "QlikView Sub 함수 설명과 용도"  
-categories: Data  
+categories: DATA  
 tags: data Qlik qlikview qliksense subroutine sub end-sub
 comments: true  
 ---  

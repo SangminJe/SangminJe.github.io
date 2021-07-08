@@ -2,7 +2,7 @@
 layout: post  
 title: "Tableau 데이터 모델"
 subtitle: "조인과 관계를 통해 알아보는 태블로"  
-categories: Data  
+categories: DATA  
 tags: Data Tableau tableau 태블로 태블로-모델링 
 comments: true  
 ---  

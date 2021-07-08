@@ -2,7 +2,7 @@
 layout: post  
 title: "R에서 꼭 필요한 정규표현식"
 subtitle: "stringr을 활용한 정규표현식 이해"  
-categories: Data
+categories: DATA
 tags: Data ML R Regex 정규표현식 stringr R-정규표현식
 comments: true  
 ---  

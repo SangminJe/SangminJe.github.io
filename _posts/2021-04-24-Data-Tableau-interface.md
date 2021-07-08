@@ -2,7 +2,7 @@
 layout: post  
 title: "Tableau 인터페이스"
 subtitle: "태블로 Desktop과 태블로 Public의 차이와 인터페이스"  
-categories: Data  
+categories: DATA  
 tags: Data Tableau tableau 태블로 태블로-인터페이스 태블로-퍼블릭과-데스크탑의-차이 
 comments: true  
 ---  

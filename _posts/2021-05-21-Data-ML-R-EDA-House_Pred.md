@@ -2,7 +2,7 @@
 layout: post  
 title: "Tidymodels로 시작하는 머신러닝 - House Price Prediction (1)"
 subtitle: "Data 확인과 EDA"  
-categories: Data
+categories: DATA
 tags: Data ML R tidymodels EDA 타이디모델 R-machine-learning House-Price-Prediction
 comments: true  
 ---  

@@ -2,7 +2,7 @@
 layout: post  
 title: "코호트 분석이란?"
 subtitle: "정의와 예시로 이해하는 코호트 분석"  
-categories: Data  
+categories: DATA  
 tags: Analytics cohort 코호트-분석 코호트-분석이란
 comments: true  
 ---  

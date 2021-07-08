@@ -2,7 +2,7 @@
 layout: post  
 title: "Tidymodels로 시작하는 머신러닝 (2)"
 subtitle: "2. 데이터 전처리(Recipe & Workflow)"  
-categories: Data  
+categories: DATA  
 tags: Data ML tidymodels Recipe tidymodels-recipe 타이디모델-레시피 R-machine-learning R
 comments: true  
 ---  

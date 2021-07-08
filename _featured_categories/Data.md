@@ -1,10 +1,10 @@
 ---
 layout: list
-title: Data
-slug: Data
+title: DATA
+slug: DATA
 menu: true
 submenu: true
 order: 1
 description: >
-  Data Science 관련 주제를 다룹니다.
+  Data 관련 주제를 다룹니다.
 ---
