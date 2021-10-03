@@ -55,10 +55,8 @@ comments: true
 이럴 땐 [이 블로그](https://blog.nachal.com/1691)를 참조하여 Docker 리눅스 설치를 마무리해주자.
 
 
-</br>
-
 ## 2. Docker에 이미지 불러오기
----
+
 
 ### 2.1. rocker/tidyverse 이미지 가져오기(Test)
 ---
@@ -103,10 +101,8 @@ docker run -d -p 4567:4567 -v ${pwd}:/home/rstudio -e PASSWORD=random --name myf
 
 위 과정은 현재 내 **로컬 폴더**와 **가상 환경(도커)** 를 연결하는 것이다. **이미지**와 **컨테이너**는 다른 개념이다. **이미지**가 CD라고 한다면 **컨테이너**는 그 CD가 깔리는 별도의 공간이라고 생각하면 된다.
 
-</br>
 
 ## 3. Docker 이미지 만들기
----
 
 ### 3.1. DockerFile 만들기
 ---
