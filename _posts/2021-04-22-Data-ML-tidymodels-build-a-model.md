@@ -97,14 +97,14 @@ comments: true
 
 `width ~ initial_volume *food_regime`  
 위와 같은 형태로 데이터를 짜면 food\_regime에 따라서 각각의
-기울기(slope)와 절편(intercept)을 구할 수 있습니다.이제 여기서
-[parsnip](https://parsnip.tidymodels.org/) 패키지를 사용하자. 우리는 **Regression** 즉 예측값을 추정해보고 싶으므로 **회귀분석(Linear Regression)**을 시행합니다.
+기울기(slope)와 절편(intercept)을 구할 수 있습니다. 이제 여기서
+[parsnip](https://parsnip.tidymodels.org/) 패키지를 사용해봅시다. 우리는 **Regression** 즉 예측값을 추정해보고 싶으므로 **회귀분석(Linear Regression)**을 시행합니다.
 ```r
     lr_mod <- 
       linear_reg() %>%  # 모델 특정하기
       set_engine('lm')
 ```
-1.  먼저 모델을 선언해준다. 여기서는 `linear_reg()`이라고 선형귀모델을 선언했습니다.
+1.  먼저 모델을 선언해줍니다. 여기서는 `linear_reg()`이라고 선형귀모델을 선언했습니다.
 2.  [set engine](https://parsnip.tidymodels.org/reference/set_engine.html)은 어떤 패키지나 컴퓨팅시스템을 통해서 모델을 훈련시킬 것인지 지정하는 것입니다.
 
 

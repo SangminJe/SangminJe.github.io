@@ -1,31 +1,55 @@
 ---  
 layout: post  
-title: "R에서 Deep Learning을 하기 위한 환경 설정1"
-subtitle: "Docker를 알아야 한다.."  
+title: "R에서 Deep Learning을 하기 위한 환경 설정2"
+subtitle: "이미지 Pull하고 GPU 올리기"  
 categories: DEV
 tags: DEV Backend Docker R 
 comments: true  
 ---  
 
-- 이 문서는 Issac님의 Kaggle Study 모임에서 공부한 내용입니다.
-- Docker 설치와 관련된 자세한 내용은 [링크](https://www.youtube.com/watch?v=VVxvL4xRPjU)를 참조하세요.
-
-# Docker를 설치하는 이유
----
-
-- R을 활용해서 Deep Learning을 하려고함
-    - `Torch`패키지는 R에서 깔리긴 하나,
-    - 함수 명령어를 사용하면 Rtudio가 뻗어버림
-    - 그래서 Docker로 리눅스 환경을 만들어서 활용하려고 하는 것
+- GPU Set up과 설치와 관련된 자세한 내용은 [Issac님의 영상](https://youtu.be/tnPocbtKRqo)를 참조하세요.
 
 
 # 사전 준비사항
 ---
-1. Window 10 or 11
-2. WSL2 깔려있어야 함
-3. Docker Desktop 설치 되어 있어야 함
 
-* 위 사항은 [이삭님의 유튜브](https://www.youtube.com/watch?v=VVxvL4xRPjU)를 보시고 따라오시면 됩니다.
+* [R에서 Deep Learning을 하기 위한 환경 설정1](https://sangminje.github.io/dev/2021/09/25/Dev-R-Docker/)에 후행하는 문서입니다.
+
+<br>
+<br>
+
+# 과정
+---
+<br>
+
+
+### 1. Docker Image  
+
+ - `docker pull cara3621/r-torch:latest` 명령어를 사용해서 **r-torch**가 깔려있는 이미지 전체를 다운로드 받는다.
+ -  `:`다음에 있는 내용은 버전이며 보통 **latest**로 설정해서 가장 최신의 버전으로 가져온다.
+
+<br>
+
+### 2. 디렉토리 설정
+
+![img](https://sangminje.github.io/assets/img/docker/docker2_1.PNG)
+
+- 그림에서 보는 바와 같이 특정 디렉토리를 설정해준다.
+- 이걸 설정해주는 이유는 특정 디렉토리와 Docker Container를 연결해주기 위함이다.
+- `cd 디렉토리` 형태로 명령어를 설정한다.
+
+### 3. GPU 설정하기 위한 실행
+
+- `docker run -d --gpus all -p 1234:8787 -v ${pwd}:/home/rstudio --name torch_with_gpu cara3621/r-torch:latest` 이 명령어를 사용하여 **torch_with_gpu**라는 이름의 컨테이너를 생성하려고 시도했다.
+- 설정하려고 보니 자꾸 에러가 뜬다.
+![img](https://sangminje.github.io/assets/img/docker/docker2_2.PNG) 
+- 에러인 즉슨 현재 nvidia gpu를 사용하고 있는데 이게 리눅스 환경에 제대로 적용이 안되어 있는 것 같다.
+- 이를 위해서는 CUDA를 설치해야 하는 것 같고 CUDA 설치를 위해서는 윈도우에서는 11버전으로 업데이트하거나 Window Insder 프로그램에 등록해야 하는 것으로 보인다.
+
+
+
+
+
 
 
 # 설치과정

@@ -3,7 +3,7 @@ layout: post
 title: "티스토리에서 Github로 넘어온 엔지니어"
 subtitle: "티스토리에서 블로그 포스팅으로 옮겨온 데이터 엔지니어"  
 categories: JESSIE  
-tags: think blog
+tags: thinks blog
 comments: true  
 ---  
 
