@@ -8,9 +8,8 @@ comments: true
 ---  
 
 Python으로 머신러닝을 하면서 자꾸 잊어버리게 되는 **Pandas**의 문법 메모해놓았다.
-
 # Pandas Import
----
+
 
 ```python
 import pandas as pd
@@ -21,6 +20,8 @@ import pandas as pd
 df = pd.read_csv("./data/titanic/train.csv")
 df.head(3)
 ```
+
+
 
 
 <div>
@@ -108,7 +109,7 @@ df.head(3)
 
 
 # Data Type
----
+
 
 ```python
 type(df)
@@ -124,7 +125,7 @@ type(df)
 - DataFrame 타입임이 명시됨
 
 # Data Shape
----
+
 
 ```python
 df.shape
@@ -162,7 +163,7 @@ df.shape[1] # Column수 출력
 
 
 # Data info
----
+
 
 ```python
 df.info()
@@ -194,7 +195,7 @@ df.info()
 3. Null개수 파악 가능
 
 # Data Describe
----
+
 
 ```python
 df.describe()
@@ -318,7 +319,7 @@ df.describe()
 
 
 # Value Counts
----
+
 - **Series** 타입의 데이터를 줘야 값을 반환함
 - 분포 확인에 적합
 
@@ -337,7 +338,6 @@ df["Survived"].value_counts()
 
 
 # DataFrame, List, ndarray 상호변환
----
 
 ### List, ndarray, dict -> DataFrame
 
@@ -408,7 +408,6 @@ print(dict3)
     
 
 # DataFrame 데이터 삭제
----
 - `drop` 함수를 사용함
 - `axis=0`은 특정 로우를 드롭, `axis=1`은 특정 컬럼을 드롭한다는 의미
 - 항상 axis와 같이 사용함
@@ -610,7 +609,6 @@ df.drop("Pclass", axis=1, inplace=True)
 ```
 
 # Index 객체
----
 - DB에서 PK의 역할을 수행
 - 슬라이싱 가능 -> `[:,]`을 이용 가능
 - Index 값을 임의로 변경할 수 없음
@@ -729,7 +727,7 @@ print(indexes)
 
 
 ```python
-df.reset_index()
+df.reset_index().head(3)
 ```
 
 
@@ -755,6 +753,7 @@ df.reset_index()
       <th></th>
       <th>index</th>
       <th>PassengerId</th>
+      <th>fake_age</th>
       <th>Survived</th>
       <th>Pclass</th>
       <th>Name</th>
@@ -773,6 +772,7 @@ df.reset_index()
       <th>0</th>
       <td>0</td>
       <td>1</td>
+      <td>88.0</td>
       <td>0</td>
       <td>3</td>
       <td>Braund, Mr. Owen Harris</td>
@@ -782,13 +782,14 @@ df.reset_index()
       <td>0</td>
       <td>A/5 21171</td>
       <td>7.2500</td>
-      <td>NaN</td>
+      <td>C000</td>
       <td>S</td>
     </tr>
     <tr>
       <th>1</th>
       <td>1</td>
       <td>2</td>
+      <td>152.0</td>
       <td>1</td>
       <td>1</td>
       <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>
@@ -805,6 +806,7 @@ df.reset_index()
       <th>2</th>
       <td>2</td>
       <td>3</td>
+      <td>104.0</td>
       <td>1</td>
       <td>3</td>
       <td>Heikkinen, Miss. Laina</td>
@@ -814,146 +816,16 @@ df.reset_index()
       <td>0</td>
       <td>STON/O2. 3101282</td>
       <td>7.9250</td>
-      <td>NaN</td>
+      <td>C000</td>
       <td>S</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>3</td>
-      <td>4</td>
-      <td>1</td>
-      <td>1</td>
-      <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>
-      <td>female</td>
-      <td>35.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>113803</td>
-      <td>53.1000</td>
-      <td>C123</td>
-      <td>S</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>4</td>
-      <td>5</td>
-      <td>0</td>
-      <td>3</td>
-      <td>Allen, Mr. William Henry</td>
-      <td>male</td>
-      <td>35.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>373450</td>
-      <td>8.0500</td>
-      <td>NaN</td>
-      <td>S</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>886</th>
-      <td>886</td>
-      <td>887</td>
-      <td>0</td>
-      <td>2</td>
-      <td>Montvila, Rev. Juozas</td>
-      <td>male</td>
-      <td>27.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>211536</td>
-      <td>13.0000</td>
-      <td>NaN</td>
-      <td>S</td>
-    </tr>
-    <tr>
-      <th>887</th>
-      <td>887</td>
-      <td>888</td>
-      <td>1</td>
-      <td>1</td>
-      <td>Graham, Miss. Margaret Edith</td>
-      <td>female</td>
-      <td>19.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>112053</td>
-      <td>30.0000</td>
-      <td>B42</td>
-      <td>S</td>
-    </tr>
-    <tr>
-      <th>888</th>
-      <td>888</td>
-      <td>889</td>
-      <td>0</td>
-      <td>3</td>
-      <td>Johnston, Miss. Catherine Helen "Carrie"</td>
-      <td>female</td>
-      <td>NaN</td>
-      <td>1</td>
-      <td>2</td>
-      <td>W./C. 6607</td>
-      <td>23.4500</td>
-      <td>NaN</td>
-      <td>S</td>
-    </tr>
-    <tr>
-      <th>889</th>
-      <td>889</td>
-      <td>890</td>
-      <td>1</td>
-      <td>1</td>
-      <td>Behr, Mr. Karl Howell</td>
-      <td>male</td>
-      <td>26.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>111369</td>
-      <td>30.0000</td>
-      <td>C148</td>
-      <td>C</td>
-    </tr>
-    <tr>
-      <th>890</th>
-      <td>890</td>
-      <td>891</td>
-      <td>0</td>
-      <td>3</td>
-      <td>Dooley, Mr. Patrick</td>
-      <td>male</td>
-      <td>32.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>370376</td>
-      <td>7.7500</td>
-      <td>NaN</td>
-      <td>Q</td>
     </tr>
   </tbody>
 </table>
-<p>891 rows × 13 columns</p>
 </div>
 
 
 
 # 결손 데이터 처리
----
 - `isna`함수와 `fillna`함수를 기억
 
 
@@ -975,7 +847,7 @@ df.isna().sum()
     Parch            0
     Ticket           0
     Fare             0
-    Cabin          687
+    Cabin            0
     Embarked         2
     dtype: int64
 
@@ -985,7 +857,7 @@ df.isna().sum()
 ```python
 # fillna 결손데이터 대체
 df["Cabin"] = df["Cabin"].fillna("C000")
-df.head(10)
+df.head(3)
 ```
 
 
@@ -1010,6 +882,7 @@ df.head(10)
     <tr style="text-align: right;">
       <th></th>
       <th>PassengerId</th>
+      <th>fake_age</th>
       <th>Survived</th>
       <th>Pclass</th>
       <th>Name</th>
@@ -1027,6 +900,7 @@ df.head(10)
     <tr>
       <th>0</th>
       <td>1</td>
+      <td>88.0</td>
       <td>0</td>
       <td>3</td>
       <td>Braund, Mr. Owen Harris</td>
@@ -1042,6 +916,7 @@ df.head(10)
     <tr>
       <th>1</th>
       <td>2</td>
+      <td>152.0</td>
       <td>1</td>
       <td>1</td>
       <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>
@@ -1057,6 +932,7 @@ df.head(10)
     <tr>
       <th>2</th>
       <td>3</td>
+      <td>104.0</td>
       <td>1</td>
       <td>3</td>
       <td>Heikkinen, Miss. Laina</td>
@@ -1069,114 +945,167 @@ df.head(10)
       <td>C000</td>
       <td>S</td>
     </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+# 데이터 Reshaping
+- `reshape`를 사용해서 데이터의 형태를 변형
+- Scaler를 적용할 때 사용함
+
+
+```python
+import seaborn as sns
+from sklearn.preprocessing import StandardScaler
+
+scaler = StandardScaler()
+test = scaler.fit_transform(df["Fare"].values.reshape(-1,1))
+pd.DataFrame(test, columns=["test_column"]).head(3)
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>test_column</th>
+    </tr>
+  </thead>
+  <tbody>
     <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>1</td>
-      <td>1</td>
-      <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>
-      <td>female</td>
-      <td>35.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>113803</td>
-      <td>53.1000</td>
-      <td>C123</td>
-      <td>S</td>
+      <th>0</th>
+      <td>-0.502445</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>5</td>
-      <td>0</td>
-      <td>3</td>
-      <td>Allen, Mr. William Henry</td>
-      <td>male</td>
-      <td>35.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>373450</td>
-      <td>8.0500</td>
-      <td>C000</td>
-      <td>S</td>
+      <th>1</th>
+      <td>0.786845</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>6</td>
-      <td>0</td>
-      <td>3</td>
-      <td>Moran, Mr. James</td>
-      <td>male</td>
-      <td>NaN</td>
-      <td>0</td>
-      <td>0</td>
-      <td>330877</td>
-      <td>8.4583</td>
-      <td>C000</td>
-      <td>Q</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>7</td>
-      <td>0</td>
-      <td>1</td>
-      <td>McCarthy, Mr. Timothy J</td>
-      <td>male</td>
-      <td>54.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>17463</td>
-      <td>51.8625</td>
-      <td>E46</td>
-      <td>S</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>8</td>
-      <td>0</td>
-      <td>3</td>
-      <td>Palsson, Master. Gosta Leonard</td>
-      <td>male</td>
-      <td>2.0</td>
-      <td>3</td>
-      <td>1</td>
-      <td>349909</td>
-      <td>21.0750</td>
-      <td>C000</td>
-      <td>S</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>9</td>
-      <td>1</td>
-      <td>3</td>
-      <td>Johnson, Mrs. Oscar W (Elisabeth Vilhelmina Berg)</td>
-      <td>female</td>
-      <td>27.0</td>
-      <td>0</td>
-      <td>2</td>
-      <td>347742</td>
-      <td>11.1333</td>
-      <td>C000</td>
-      <td>S</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>10</td>
-      <td>1</td>
-      <td>2</td>
-      <td>Nasser, Mrs. Nicholas (Adele Achem)</td>
-      <td>female</td>
-      <td>14.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>237736</td>
-      <td>30.0708</td>
-      <td>C000</td>
-      <td>C</td>
+      <th>2</th>
+      <td>-0.488854</td>
     </tr>
   </tbody>
 </table>
 </div>
 
+
+
+# Data Inserting
+
+
+```python
+fake_age = df["Age"]*4
+fake_age
+df.insert(1, "fake_age",fake_age)
+# df.drop("fake_age", axis=1, inplace=True)
+df.head(3)
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PassengerId</th>
+      <th>fake_age</th>
+      <th>Survived</th>
+      <th>Pclass</th>
+      <th>Name</th>
+      <th>Sex</th>
+      <th>Age</th>
+      <th>SibSp</th>
+      <th>Parch</th>
+      <th>Ticket</th>
+      <th>Fare</th>
+      <th>Cabin</th>
+      <th>Embarked</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>88.0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Braund, Mr. Owen Harris</td>
+      <td>male</td>
+      <td>22.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>A/5 21171</td>
+      <td>7.2500</td>
+      <td>C000</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>152.0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>
+      <td>female</td>
+      <td>38.0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>PC 17599</td>
+      <td>71.2833</td>
+      <td>C85</td>
+      <td>C</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>104.0</td>
+      <td>1</td>
+      <td>3</td>
+      <td>Heikkinen, Miss. Laina</td>
+      <td>female</td>
+      <td>26.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>STON/O2. 3101282</td>
+      <td>7.9250</td>
+      <td>C000</td>
+      <td>S</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 
