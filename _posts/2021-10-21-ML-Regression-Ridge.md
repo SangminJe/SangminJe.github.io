@@ -11,7 +11,7 @@ comments: true
 ## Ridge 회귀 (L2 규제)
 ---
 
-![img](https://sangminje.github.io/assets/img/ridge_lasso/img1.PNG)
+![img](https://sangminje.github.io/assets/img/ridge_lasso/img1.png)
 
 
  - 선형 모델이며 최소적합법을 사용
@@ -24,7 +24,7 @@ comments: true
 ## Lasso 회귀 (L1 규제)
 ---
 
-![img](https://sangminje.github.io/assets/img/ridge_lasso/img2.PNG)
+![img](https://sangminje.github.io/assets/img/ridge_lasso/img2.png)
 
 - Ridge에서와 마찬가지로 계수를 0에 가깝게 제한하는 것은 동일함
 - 하지만 정말로 0인 계수가 생기기도 함. 즉 제외되는 계수도 발생

@@ -41,21 +41,46 @@ import matplotlib.pyplot as plt
 import seaborn as sns # seaborn
 import warnings
 warnings.filterwarnings("ignore") # 경고메세지 무시
+```
 
-# sklearn
-from sklearn.model_selection import train_test_split
-from sklearn.datasets import load_iris
-from sklearn.tree import DecisionTreeClassifier # 결정트리
-from sklearn.model_selection import GridSearchCV # 그리드서치
-from sklearn.metrics import accuracy_score, f1_score, confusion_matrix, precision_score, recall_score, roc_auc_score 
+
+## 사이킷런 패키지
+
+### 기본 데이터 패키지
+```py
+from sklearn.datasets import load_iris # iris
+from sklearn.datasets import load_boston # boston
+```
+
+### 전처리 패키지
+```py
+from sklearn.model_selection import train_test_split # train test split
 from sklearn.model_selection import KFold # KFold
-from sklearn.metrics import mean_absolute_error # MAE
+from sklearn.model_selection import cross_val_score # 교차검증
+from sklearn.model_selection import GridSearchCV # 그리드서치
+from imblearn.oversampling import SMOTE # 오버샘플링
+```
 
+
+### 분류 패키지
+```py
+# sklearn
+from sklearn.tree import DecisionTreeClassifier # 결정트리
+from sklearn.metrics import accuracy_score, f1_score, confusion_matrix, precision_score, recall_score, roc_auc_score # 분류 평가패키지
+```
+
+### 회귀 패키지
+```py
+from sklearn.linear_model import LinearRegression # 선형회귀
+from sklearn.preprocessing import PolynomialFeatures # 다항회귀
+from sklearn.metrics import mean_squared_error, r2_score # MSE
+from sklearn.linear_model import Ridge # 릿지
+from sklearn.linear_model import Lasso, ElasticNet # 라소, ElsasticNet
 ```
 
 ## 기타 패키지
 ```py
-from imblearn.oversampling import SMOTE # 오버샘플링
+
 ```
 
 
