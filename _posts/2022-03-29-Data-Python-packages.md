@@ -73,9 +73,13 @@ from sklearn.metrics import accuracy_score, f1_score, confusion_matrix, precisio
 ```py
 from sklearn.linear_model import LinearRegression # 선형회귀
 from sklearn.preprocessing import PolynomialFeatures # 다항회귀
+from sklearn.linear_model import Ridge, Lasso, ElasticNet # Ridge, Lasso, ElsasticNet
+from sklearn.ensemble import RandomForestRegressor # 랜덤포레스트
+from sklearn.tree import DecisionTreeRegressor # 결정트리
+from sklearn.ensemble import GradientBoostingRegressor # 그래디언트부스트
+from xgboost import XGBRegressor # XGBoosdt
+from lightgbm import LGBMRegressor # LGBM
 from sklearn.metrics import mean_squared_error, r2_score # MSE
-from sklearn.linear_model import Ridge # 릿지
-from sklearn.linear_model import Lasso, ElasticNet # 라소, ElsasticNet
 ```
 
 ## 기타 패키지

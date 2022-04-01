@@ -105,6 +105,9 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-redirect-from
+  - jekyll-toc # 2022.04.01 추가, 제상민
+
+
 
 exclude:
   - README.md
