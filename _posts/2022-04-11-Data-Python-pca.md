@@ -12,6 +12,7 @@ comments: true
 
 ## 고유값과 고유벡터 설명
 ---
+
 $$X=\begin{bmatrix} 1  \\ 1  \end{bmatrix}$$ 이라는 행렬이 있다고 가정해보자. 이 행렬에 만약 $$A=\begin{bmatrix} 2&1  \\ 1&2  \end{bmatrix}$$를 선형변환하면 이렇게 계산할 수 있다.
 
 - $$AX= \begin{bmatrix} 2&1  \\ 1&2  \end{bmatrix}\begin{bmatrix} 1  \\ 1  \end{bmatrix}=\begin{bmatrix} 3  \\ 3  \end{bmatrix}$$

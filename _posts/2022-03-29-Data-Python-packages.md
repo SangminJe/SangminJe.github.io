@@ -59,6 +59,7 @@ from sklearn.model_selection import KFold # KFold
 from sklearn.model_selection import cross_val_score # 교차검증
 from sklearn.model_selection import GridSearchCV # 그리드서치
 from imblearn.oversampling import SMOTE # 오버샘플링
+from sklearn.preprocessing import scale
 ```
 
 
@@ -84,8 +85,14 @@ from xgboost import XGBRegressor # XGBoosdt
 from lightgbm import LGBMRegressor # LGBM
 from sklearn.metrics import mean_squared_error, r2_score # MSE, R_square
 ```
+### 군집화 패키지
+```py
+from sklearn.cluster import KMeans # K-means
 
-### 차원축소
+```
+
+
+### 차원축소 패키지
 ```py
 from sklearn.decomposition import {CA}
 ```
