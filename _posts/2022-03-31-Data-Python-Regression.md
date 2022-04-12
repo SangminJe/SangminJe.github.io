@@ -117,7 +117,7 @@ plt.show()
 ```
 
 ![img](https://sangminje.github.io/assets/img/output_5_0.png)
-![img](../assets/img/output_5_0.png)
+<!-- ![img](../assets/img/output_5_0.png) -->
 
 
 - alpha를 높일수록 NOX의 회귀계수 값이 줄어듬

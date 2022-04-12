@@ -66,6 +66,9 @@ from imblearn.oversampling import SMOTE # 오버샘플링
 ```py
 # sklearn
 from sklearn.tree import DecisionTreeClassifier # 결정트리
+from sklearn.ensemble import RandomForestClassifier # RF
+from lightgbm import LGBMClassifier #LGBM
+from xgboost import XGBClassifier #XGBoost
 from sklearn.metrics import accuracy_score, f1_score, confusion_matrix, precision_score, recall_score, roc_auc_score # 분류 평가패키지
 ```
 
@@ -79,7 +82,7 @@ from sklearn.tree import DecisionTreeRegressor # 결정트리
 from sklearn.ensemble import GradientBoostingRegressor # 그래디언트부스트
 from xgboost import XGBRegressor # XGBoosdt
 from lightgbm import LGBMRegressor # LGBM
-from sklearn.metrics import mean_squared_error, r2_score # MSE
+from sklearn.metrics import mean_squared_error, r2_score # MSE, R_square
 ```
 
 ## 기타 패키지

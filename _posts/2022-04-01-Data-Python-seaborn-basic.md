@@ -171,8 +171,7 @@ sns.kdeplot(data=penguins, x="flipper_length_mm", hue="species", multiple="stack
 ## Figure Level vs Axes Level Functions
 1. axes-level는 `matplotlib.pyplot.axes`를 기준으로 만들어지고
 2. Figure-level은 `FacetGrid`를 기준으로 만들어진다.
-
-![image.png](attachment:image.png)
+![img](https://sangminje.github.io/assets/img/seaborn_basic/img_seaborn.png)
 
 ## Distribution Plots
 

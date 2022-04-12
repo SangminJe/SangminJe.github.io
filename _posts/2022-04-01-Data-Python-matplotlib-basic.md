@@ -42,7 +42,7 @@ plt.show()
 
 ## Figure의 구성
 
-![image.png](attachment:image.png)
+![img](https://sangminje.github.io/assets/img/mat_plotlib_basic/mat.png)
 
 - figure는 ax를 담는 그릇이다. 각 ax는 하나의 차트, 또는 좌표평면이라고 보면 될 것 같다.
 
