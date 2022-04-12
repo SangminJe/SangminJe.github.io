@@ -85,6 +85,12 @@ from lightgbm import LGBMRegressor # LGBM
 from sklearn.metrics import mean_squared_error, r2_score # MSE, R_square
 ```
 
+### 차원축소
+```py
+from sklearn.decomposition import {CA}
+```
+
+
 ## 기타 패키지
 ```py
 

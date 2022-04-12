@@ -40,11 +40,11 @@ comments: true
 ## 공분산
 ---
 공분산 공식은 아래와 같다.
-> $\frac{1}{n-1}\sum_{i=1}^{N}(x_i-\bar{x})(y_i-\bar{y})$
+> $$\frac{1}{n-1}\sum_{i=1}^{N}(x_i-\bar{x})(y_i-\bar{y})$$
 - 두 변수의 **방향**을 의미함
 - 두 변수의 **공분산행렬**은 다음과 같이 표현된다. 여기서 a는 첫 번째 변수의 분산, b는 공분산, c는 두 번째 변수의 분산으로 표현된다. 만약 국어와 영어점수가 있다고 한다면 a는 국어의 분산, c는 영어의 분산, 그리고 b는 공분산이 된다.
 
-$\begin{pmatrix}a & b \\ b & c \end{pmatrix}$
+$$\begin{pmatrix}a & b \\ b & c \end{pmatrix}$$
 
 | 국어  | 영어  |
 |---|---|
@@ -61,6 +61,6 @@ $\begin{pmatrix}a & b \\ b & c \end{pmatrix}$
 ## 상관관계
 ---
 상관계수(p)는 아래와 같이 계산이 된다.
-p = $Cov(x,y) \over \sqrt{Var(x)*Var(y)}$
+p = $$Cov(x,y) \over \sqrt{Var(x)*Var(y)}$$
 - 공분산을 각각의 분산으로 나누어 **표준화**한 개념
 - 상관계수는 -1에서 1 사이의 값을 가지며 각 -1과 1에 근접할수록 상관관계가 있는 것을 판단 가능
