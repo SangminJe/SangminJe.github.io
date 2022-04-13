@@ -4,7 +4,8 @@ title: "경사하강법(Gradient Decent) 정리"
 subtitle: "경사하강법과 확률적경사하강법"  
 categories: DATA
 tags: DATA python Python_Data Gradient Descent
-comments: true  
+comments: true
+use_math: true  
 ---  
 
 # 경사하강법 정의
