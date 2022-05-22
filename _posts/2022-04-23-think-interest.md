@@ -2,7 +2,7 @@
 layout: post  
 title: "금리의 쉬운 이해(슈카월드 내용 정리)"
 subtitle: ""  
-categories: think
+categories: JESSIE
 tags: think Books
 comments: true 
 ---  

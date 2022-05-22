@@ -2,7 +2,7 @@
 layout: post  
 title: "예비부모교실 2일차"
 subtitle: ""  
-categories: think
+categories: JESSIE
 tags: baby
 comments: true 
 ---  
