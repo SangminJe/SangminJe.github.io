@@ -3,7 +3,7 @@ layout: post
 title: "바쁨중독"
 subtitle: "바쁨중독을 읽고 돌아본 나"  
 categories: JESSIE
-tags: think Books
+tags: Books
 comments: true 
 ---  
 
