@@ -1,6 +1,6 @@
 ---  
 layout: post  
-title: "Spotfire Customization Guide"
+title: "[Spotfire] Guide"
 subtitle: "Spotfire를 Customization 하기 위한 링크 및 정보 모음"  
 categories: DATA
 tags: DATA spotfire customization 커스터마이제이션 IronPython Javascript side panel

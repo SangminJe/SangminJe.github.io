@@ -1,6 +1,6 @@
 ---  
 layout: post  
-title: "Python 머신러닝 분류 스태킹 정리"
+title: "[Python] 머신러닝 분류 스태킹 정리"
 subtitle: ""  
 categories: DATA
 tags: DATA python Python_Data Stacking 머신러닝 스태킹

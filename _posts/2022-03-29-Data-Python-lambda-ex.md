@@ -1,6 +1,6 @@
 ---  
 layout: post  
-title: "Python lambda expression"
+title: "[Python] lambda expression"
 subtitle: "lambda 표현식 정리"  
 categories: DATA
 tags: python Python_Data pandas lmabda_expression

@@ -1,6 +1,6 @@
 ---  
 layout: post  
-title: "유용한 판다스 문법 정리 (1) - 결손데이터"
+title: "[Python] 유용한 Pandas 문법 정리 (1) - 결손데이터"
 subtitle: ""  
 categories: DATA
 tags: DATA python Python_Data pandas filter null

@@ -1,6 +1,6 @@
 ---  
 layout: post  
-title: "Python Matploblib 기본"
+title: "[Python] Matploblib 기본"
 subtitle: "자꾸 까먹는 Matplotlib"  
 categories: DATA
 tags: DATA python Python_Data matplotlib basic matplotlib 기본

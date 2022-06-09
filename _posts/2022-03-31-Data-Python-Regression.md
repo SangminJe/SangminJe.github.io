@@ -1,6 +1,6 @@
 ---  
 layout: post  
-title: "릿지, 라쏘, 엘리스틱넷"
+title: "[Python] 릿지, 라쏘, 엘리스틱넷"
 subtitle: "선형회귀 규제모델에 대한 실습"  
 categories: DATA
 tags: DATA python Python_Data Ridge Lasso ElasticNet

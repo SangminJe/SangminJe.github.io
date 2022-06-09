@@ -1,6 +1,6 @@
 ---  
 layout: post  
-title: "Python 머신러닝 패키지 및 함수 정리"
+title: "[Python] 머신러닝 패키지 및 함수 정리"
 subtitle: "Python 머신러닝을 위해 설치가 필요한 패키지 및 함수 정리"  
 categories: DATA
 tags: DATA python Python_Data packages_for_machine_learning 머신러닝 패키지 및 함수

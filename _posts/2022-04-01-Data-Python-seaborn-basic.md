@@ -1,6 +1,6 @@
 ---  
 layout: post  
-title: "Python seaborn 기본"
+title: "[Python] Seaborn 기본"
 subtitle: "자꾸 까먹는 seaborn"  
 categories: DATA
 tags: DATA python Python_Data matplotlib basic seaborn 기본

@@ -1,6 +1,6 @@
 ---  
 layout: post  
-title: "Python-Beautiful Soup Post 방식을 통해 KRX 주식정보 가져오기"
+title: "[Python] Beautiful Soup Post 방식을 통해 KRX 주식정보 가져오기"
 subtitle: "POST 방식을 이용한 데이터 가져오는 프로세스 이해"  
 categories: DATA
 tags: DATA python Python_Data beautiful-soup post KRX Data 주식데이터
@@ -23,7 +23,7 @@ from bs4 import BeautifulSoup as bs
 4. 구조는 generate.cmd에서 OTP데이터를 만들어 KRX 사이트에 전달하면, download.cmd가 실행되는 구조
     - generate.cmd의 정보를 download.cmd가 받아들이면 Form Data에는 generate.cmd에서 생성한 OTP 정보가 들어가 있음
 5. 개발자도구에서 Payload 부분에 들어가면 **Form Data**가 있는데 해당 부분을 가져와서 post 정보로 구성해야함
-![image.png](https://sangminje.github.io/assets/img/bs.img2.png)
+![image.png](https://sangminje.github.io/assets/img/bs/img2.png)
 
 
 ## generate.cmd에서 otp 받아오기

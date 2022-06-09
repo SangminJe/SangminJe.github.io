@@ -1,6 +1,6 @@
 ---  
 layout: post  
-title: "Python For Loop와 Enumerate 정리"
+title: "[Python] For Loop와 Enumerate 정리"
 subtitle: ""  
 categories: DATA
 tags: DATA python Python_Data For Loop Enumerate

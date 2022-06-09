@@ -1,6 +1,6 @@
 ---  
 layout: post  
-title: "Python Pandas 기본"
+title: "[Python] Pandas 기본"
 subtitle: "Slicing을 제외한 Pandas 기본"  
 categories: DATA
 tags: python Python_Data pandas
