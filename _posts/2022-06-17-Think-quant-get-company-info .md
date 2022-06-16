@@ -247,10 +247,6 @@ all_data = list(zip(ticker, name))
 ticker_df = pd.DataFrame(all_data, columns = ['ticker','company'])
 ```
 
-    C:\python3\lib\site-packages\bs4\__init__.py:435: MarkupResemblesLocatorWarning: The input looks more like a filename than markup. You may want to open this file and pass the filehandle into Beautiful Soup.
-      warnings.warn(
-    
-
 
 ```python
 ticker_df.head(5)
@@ -351,19 +347,6 @@ resp = urlopen(get_url) # url 오픈
 df = pd.read_xml(resp) # xml 읽기
 df2 = df[["sj_div","sj_nm","account_nm", "thstrm_amount"]] # 재무재표구분, 재무제표명, 계정명, 당기금액
 df2["year"] = year
-```
-
-    C:\Users\Jessie\AppData\Local\Temp\ipykernel_37176\235824798.py:9: SettingWithCopyWarning: 
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-    
-    See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
-      df2["year"] = year
-    
-
-
-```python
-df2.reset_index().drop("index", axis=1, inplace=True)
 ```
 
 ##  4. 년도 별, 회사 별 정보 크롤링
